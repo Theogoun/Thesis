@@ -8,12 +8,14 @@
 ### Research
 - **Terminology on Anatomy and Geometry:** To create the prototype the right  documentation was needed, finding the correct terms for every part and measurement of the bike was the first part of the research, which was found in a security oriented review and recommendation site for everything bicycle related called "Bike Lock WIKI" in their comprehensive diagram on bike parts found [here](https://www.bikelockwiki.com/parts-of-a-bike-diagram/). The geometry side was much simpler, being able to be condensed into one reference image with any details needed explained thoroughly in the site "GeometryGeeks.bike" in [this page](https://geometrygeeks.bike/understanding-bike-geometry/).
 
-![[Bike Parts.png|]]
+![image](Bike_Parts.png)
+
 *Bike parts found in [bikelockwiki.com](https://www.bikelockwiki.com)* 
 
 - **Prototype Reference:** A reference was needed to make the base prototype for the bike to take form, it would later be customized so a temporary template was needed which was found in a [research paper](https://www.researchgate.net/publication/295675697_Multi-objective_optimization_of_an_on-road_bicycle_frame_by_uniform_design_and_compromise_programming) about bicycle frame optimization by uniform design and compromise programming. From that paper the example given in the form of a picture that is shown below was taken for the length and thickness of each bike part.
 
-![[Bike Reference.png]]
+![image](bike1.png)
+
 *Image taken from the [research paper](https://www.researchgate.net/figure/Basic-dimensions-of-on-road-bicycle-frame-model_fig2_295675697)* 
 
 - **Finding the "important" parts:** In order for the bike to be customized to our liking the ability to bend the frame was needed, but in order to do that the editable measurements should be assigned prior to the design of the bike to make sure everything was in order. By that we are ensuring that we are only editing the things that are able to be edited and we are unable to edit the parts of the bike that would ultimately deform the frame in ways its not intended. Through some research on the capabilities of the 3D modeling software that was used (Blender) and through consideration of the most vital parts of the bike, it was concluded that the minimum requirement of data needed were the following measurements:
