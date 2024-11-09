@@ -1,8 +1,8 @@
 ## Process of Bike Creation
-- [[#Research]]
-- [[#Making the model]]
-- [[#Setting the rigs and constraints]]
-- [[#Edit Script]]
+- [Research](#research)
+- [Making the model](#making-the-model)
+- [Setting the rigs and constraints](#setting-the-rigs-and-constraints)
+- [Edit Script](#edit-script)
 - Drivetrain Parts
 
 ### Research
