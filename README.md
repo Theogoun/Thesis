@@ -28,7 +28,7 @@
  7. Fork Length
  8. Rake/Offset
  9. Wheelbase
-	More information on how they are used in [[#Edit Script]].
+	More information on how they are used in [Edit Script](#edit-script).
 
 ![image](Bike_Geometry.png)
 
