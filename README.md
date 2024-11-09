@@ -14,7 +14,7 @@
 
 - **Prototype Reference:** A reference was needed to make the base prototype for the bike to take form, it would later be customized so a temporary template was needed which was found in a [research paper](https://www.researchgate.net/publication/295675697_Multi-objective_optimization_of_an_on-road_bicycle_frame_by_uniform_design_and_compromise_programming) about bicycle frame optimization by uniform design and compromise programming. From that paper the example given in the form of a picture that is shown below was taken for the length and thickness of each bike part.
 
-![image](Bike_Reference.png)
+![image](Bike1.png)
 
 *Image taken from the [research paper](https://www.researchgate.net/figure/Basic-dimensions-of-on-road-bicycle-frame-model_fig2_295675697)* 
 
