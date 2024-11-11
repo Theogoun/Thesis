@@ -1,3 +1,5 @@
+**The following are all of the notes for the Bike model**
+
 ## Process of Bike Creation
 - [Research](#research)
 - [Making the model](#making-the-model)
