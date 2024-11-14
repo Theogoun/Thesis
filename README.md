@@ -10,13 +10,13 @@
 ### Research
 - **Terminology on Anatomy and Geometry:** Finding the correct terms for every part and measurement of the bike was the first part of the research, which was found in a security oriented review and recommendation site for everything bicycle related called "Bike Lock WIKI" in their comprehensive diagram on bike parts [here](https://www.bikelockwiki.com/parts-of-a-bike-diagram/), the most important parts are shown in the picture below. The geometry side was much simpler, being able to be condensed into one reference image with any details needed explained thoroughly in the site "GeometryGeeks.bike" in [this page](https://geometrygeeks.bike/understanding-bike-geometry/).
 
-![image](Bike_Parts.png)
+![image](Images/Bike_Parts.png)
 
 *Bike parts found in [bikelockwiki.com](https://www.bikelockwiki.com)* 
 
 - **Prototype Reference:** A reference was needed to make the base prototype for the bike to take form, it would later be customized so a temporary template was needed which was found in a [research paper](https://www.researchgate.net/publication/295675697_Multi-objective_optimization_of_an_on-road_bicycle_frame_by_uniform_design_and_compromise_programming) about bicycle frame optimization by uniform design and compromise programming. From that paper the example given in the form of a picture that is shown below was taken for the length and thickness of each bike part.
 
-![image](Bike_Reference.png)
+![image](Images/Bike_Reference.png)
 
 *Image taken from the [research paper](https://www.researchgate.net/figure/Basic-dimensions-of-on-road-bicycle-frame-model_fig2_295675697)* 
 
@@ -32,7 +32,7 @@
  9. Wheelbase
 	More information on how they are used in the [Rig section](#setting-the-rig).
 
-![image](Bike_Geometry.png)
+![image](Images/Bike_Geometry.png)
 
 *Bike geometry found in [geometrygeeks.bike](https://geometrygeeks.bike)* 
 
@@ -42,13 +42,13 @@
 ### Making the model
 Aiming for simplicity at first the base prototype bike was made to have anything practical applied to it's generalized frame. This prototype was multiple cylinders, each of them being one of the six parts of the bike frame as seen below. They were aligned and measured by tracing them over the example taken from the research paper mentioned in the [[#Research]] section.
 
-![image](Modeling.png)
+![image](Images/Modeling.png)
 
 *Screenshot taken in Blender*
 
 After making this standard frame, the parts that would be holding the back tire were split in half to accommodate the wheels while making sure to not have a hollow half-cylinder, completing the frame. Following that the Fork of the bike was created and split to be able to hold the front wheel. Having the all the needed parts for it the wheels, seat and handle were also added to bike making it although simple, complete and fully functional for the editing process.
 
-![image](Modeling_Final.png)
+![image](Images/Modeling_Final.png)
 
 *Screenshot taken in Blender*
 
@@ -61,7 +61,7 @@ The key points where condensed into 5 points in the 3D environment, for simplici
 - D: Front Tire
 - E: Back Tire
 
-![image](Points.png)
+![image](Images/Points.png)
 
 *Image created by my brother using Illustrator*
 
@@ -83,7 +83,7 @@ Similarly the way the bones are connected is very important as it would be compl
 #### Armatures
 A total of 2 armatures were made, one for the frame of the bike and one for the fork and everything attached to it. As seen in the image below the bones highlighted in green make up the armature responsible for the frame and the gray bone is the separate armature for the rest. The armatures are named "AFrame" and "AFork" respectively.
 
-![image](Bike_Rigs.png)
+![image](Images/Bike_Rigs.png)
 
 *Screenshot taken in Blender*
 
