@@ -112,7 +112,7 @@ There is a function named "Set_Point()" which takes as input the name of the obj
 1. The data is read and adjusted in order to be ready for the calculations needed to place each part in it's correct place.
 2. The X and Z axis are both appointed to the needed value for the point, in this case its the A point so X=0 and Z=0, then we run the function for the A point moving it to (0,0). This process is repeated for every major point.
 3. Small adjustments are made during the first part, namely in the Head Tube parts and for the D point to account for the Rake/Offset.
-4. Any part that isn't attached to the bike is moved to the right place, that includes the handle and the seat
+4. Any part that isn't part of the bike frame is moved to the right place, that includes the handle and the seat
 5. The wheels will be transformed in any way needed.
 
 Tire thickness, radius change angles to rads
