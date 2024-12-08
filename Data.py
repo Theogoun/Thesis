@@ -1,6 +1,10 @@
 import yaml
 
 # The Frame parts' info needed
+C = input("Give the color of the bike \n")
+M = input("Give the Material of the bike \n")
+D = input("Give the Diameter of the Tubes in mm \n")
+T = input("Give the Thickness of the Tubes in mm \n")
 SA = input("Give the Seat Angle in degrees \n")
 ST = input("Give the Seat Tube Lenght in mm \n")
 STA = input("Give the Stack in mm \n")
@@ -12,12 +16,14 @@ RO = input("Give the Rake/Offset in mm \n")
 WB = input("Give the Wheelbase in mm \n")
 
 # The Tire info needed
-TR = input("Give the tire radius in mm \n")
-TT = input("Give Tire Thickness in mm \n")
+TR = input("Give the tire radius \n")
+TW = input("Give Tire Width \n")
 
 # Creating the dict that will be turned into the yaml file
-A = [{'Frame':{'Seat Angle':SA,'Seat Tube':ST,'Stack':STA,'Reach':RE,'Head Angle':HA,'Head Tube':HT,'Fork Length':FL,'Rake Offset':RO,'Wheelbase':WB},
-      'Tires':{'Tire Radius':TR}}]
+A = [{'Frame':
+      {'Color':C,'Material':M,'Diameter':D,'Thickness':T,'Seat Angle':SA,'Head Angle':HA,'Stack':STA,'Reach':RE,'Seat Tube':ST,'Head Tube':HT,'Fork Length':FL,'Rake Offset':RO,'Wheelbase':WB},
+      'Wheels':
+      {'Tire Radius':TR,'Tire Width':TW}}]
 
 
 # Still just print for testing
