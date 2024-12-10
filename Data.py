@@ -20,10 +20,12 @@ TR = input("Give the tire radius \n")
 TW = input("Give Tire Width \n")
 
 # Creating the dict that will be turned into the yaml file
-A = [{'Frame':
+A = {
+      'Frame':
       {'Color':C,'Material':M,'Diameter':D,'Thickness':T,'Seat Angle':SA,'Head Angle':HA,'Stack':STA,'Reach':RE,'Seat Tube':ST,'Head Tube':HT,'Fork Length':FL,'Rake Offset':RO,'Wheelbase':WB},
       'Wheels':
-      {'Tire Radius':TR,'Tire Width':TW}}]
+      {'Tire Radius':TR,'Tire Width':TW}
+      }
 
 
 # Still just print for testing
