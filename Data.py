@@ -1,6 +1,6 @@
 import yaml
 
-# The Frame parts' info needed
+# The Frame parts info needed
 C = input("Give the color of the bike \n")
 M = input("Give the Material of the bike \n")
 D = input("Give the Diameter of the Tubes in mm \n")
@@ -19,12 +19,23 @@ WB = input("Give the Wheelbase in mm \n")
 TR = input("Give the tire radius \n")
 TW = input("Give Tire Width \n")
 
+# Seat info needed
+SH = input("Give the Seat Height in mm \n")
+
+# Handlebar info needed
+HBL = input("Give the Handlebar length in mm \n")
+HBH = input("Give the Handlebar height in mm \n")
+
 # Creating the dict that will be turned into the yaml file
 A = {
       'Frame':
       {'Color':C,'Material':M,'Diameter':D,'Thickness':T,'Seat Angle':SA,'Head Angle':HA,'Stack':STA,'Reach':RE,'Seat Tube':ST,'Head Tube':HT,'Fork Length':FL,'Rake Offset':RO,'Wheelbase':WB},
       'Wheels':
-      {'Tire Radius':TR,'Tire Width':TW}
+      {'Tire Radius':TR,'Tire Width':TW},
+      'Seat':
+      {'Seat Height':SH},
+      'Handlebar':
+      {'Handlebar Length':HBL,'Handlebar Height':HBH}
       }
 
 
