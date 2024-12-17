@@ -20,7 +20,7 @@ TR = input("Give the tire radius \n")
 TW = input("Give Tire Width \n")
 
 # Seat info needed
-SH = input("Give the Seat Height in mm \n")
+SP = input("Give the Seat Post in mm \n")
 
 # Handlebar info needed
 HBL = input("Give the Handlebar length in mm \n")
@@ -33,7 +33,7 @@ A = {
       'Wheels':
       {'Tire Radius':TR,'Tire Width':TW},
       'Seat':
-      {'Seat Height':SH},
+      {'Seat Post':SP},
       'Handlebar':
       {'Handlebar Length':HBL,'Handlebar Height':HBH}
       }
