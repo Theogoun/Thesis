@@ -4,17 +4,11 @@ To enhance the realism of agent movement in the simulation, a custom **Animator 
 
 - **Entry and Initial Movement**: The animation system begins at the Entry point and proceeds into the **Movement** state. This ensures that the animation logic is initiated when the simulation starts.
 
-```{figure} AnimationPlayer.png
----
-height: 500px
-name: animation_figure
----
-animation player
-```
+![Animation](../Images/animation.png)
 
 - **Blend Tree for Dynamic Movements**: A **Blend Tree** allows for fluid transitions between different walking animations and an idle state. Controlled by the `MoveX` and `MoveY` parameters, the Blend Tree dynamically adjusts the character's animations to match the direction and speed of movement.
 
-(Animation)[[Pasted image 20241111230010.png]]
+![Animation](../Images/blendtree.png)
 
 The animations values of the blend tree are set through a script in the human controller 
 
