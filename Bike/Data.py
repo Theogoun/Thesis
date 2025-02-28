@@ -29,7 +29,9 @@ HBH = input("Give the Handlebar height in mm \n")
 # Creating the dict that will be turned into the yaml file
 A = {
       'Frame':
-      {'Color':C,'Material':M,'Diameter':D,'Thickness':T,'Seat Angle':SA,'Head Angle':HA,'Stack':STA,'Reach':RE,'Seat Tube':ST,'Head Tube':HT,'Fork Length':FL,'Rake Offset':RO,'Wheelbase':WB,'Top Tube':0,'Down Tube':1},
+      {'Seat Angle':SA,'Head Angle':HA,'Stack':STA,'Reach':RE,'Seat Tube':ST,'Head Tube':HT,'Fork Length':FL,'Rake Offset':RO,'Wheelbase':WB},
+      'Frame Details':
+      {'Color':C,'Material':M,'Diameter':D,'Thickness':T,'Top Tube':0,'Down Tube':1},
       'Wheels':
       {'Tire Radius':TR,'Tire Width':TW},
       'Seat':
