@@ -1,37 +1,42 @@
 import yaml
 
 # The Frame parts info needed
-C = "Blue"
+# Frame
+FL = 470
+HA = 69.5
+HT = 130
+RO = 40
+RE = 480
+SA = 73
+ST = 375
+STA = 620
+WB = 1080
+
+# Frame Details
 M = "Metal"
 D = 0.2
 T = 0.002
-SA = 75
-ST = 390
-STA = 620
-RE = 480
-HA = 73
-HT = 115
-FL = 480
-RO = 40
-WB = 1250
+TT = True
+DT = True
 
-# The Tire info needed
-TR = input("Give the tire radius \n")
-TW = input("Give Tire Width \n")
+# Handlebar
+HBH = 50
+HBL = 400
 
 # Seat info needed
-SP = input("Give the Seat Post in mm \n")
+SP = 150
 
-# Handlebar info needed
-HBL = input("Give the Handlebar length in mm \n")
-HBH = input("Give the Handlebar height in mm \n")
+# Wheels
+TR = 700
+TW = 40
+
 
 # Creating the dict that will be turned into the yaml file
 A = {
       'Frame':
       {'Seat Angle':SA,'Head Angle':HA,'Stack':STA,'Reach':RE,'Seat Tube':ST,'Head Tube':HT,'Fork Length':FL,'Rake Offset':RO,'Wheelbase':WB},
       'Frame Details':
-      {'Color':C,'Material':M,'Diameter':D,'Thickness':T,'Top Tube':0,'Down Tube':1},
+      {'Material':M,'Diameter':D,'Thickness':T,'Top Tube':TT,'Down Tube':DT},
       'Wheels':
       {'Tire Radius':TR,'Tire Width':TW},
       'Seat':
@@ -43,3 +48,6 @@ A = {
 
 # Still just print for testing
 print(yaml.dump(A))
+
+#with open("bike.yaml", "w") as file:
+#    yaml.dump(bike_data, file, default_flow_style=False)
