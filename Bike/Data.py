@@ -6,7 +6,7 @@ FL = 470 # Fork Length (mm)
 HA = 69.5 # Head Angle (Degrees)
 HT = 130 # Head Tube (mm)
 RO = 40 # Rake/Offset (mm)
-RE = 480 # Reach (mm)
+RE = 380 # Reach (mm)
 SA = 73 # Seat Angle (Degrees)
 ST = 375 # Seat Tube (mm)
 STA = 620 # Stack (mm)
@@ -38,7 +38,7 @@ bike_data = {
       'Frame Details':
       {'Material':M,'Diameter':D,'Thickness':T,'Top Tube':TT,'Down Tube':DT},
       'Wheels':
-      {'Tire Radius':TW,'Tire Size':TS},
+      {'Tire Width':TW,'Tire Size':TS},
       'Seat':
       {'Seat Post':SP},
       'Handlebar':

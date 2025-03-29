@@ -3,7 +3,7 @@ Frame:
   Head Angle: 69.5
   Head Tube: 130
   Rake Offset: 40
-  Reach: 480
+  Reach: 380
   Seat Angle: 73
   Seat Tube: 375
   Stack: 620
@@ -20,5 +20,5 @@ Handlebar:
 Seat:
   Seat Post: 150
 Wheels:
-  Tire Radius: 40
   Tire Size: 700
+  Tire Width: 40
