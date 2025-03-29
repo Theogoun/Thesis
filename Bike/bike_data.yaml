@@ -1,0 +1,24 @@
+Frame:
+  Fork Length: 470
+  Head Angle: 69.5
+  Head Tube: 130
+  Rake Offset: 40
+  Reach: 480
+  Seat Angle: 73
+  Seat Tube: 375
+  Stack: 620
+  Wheelbase: 1080
+Frame Details:
+  Diameter: 200
+  Down Tube: true
+  Material: Metal
+  Thickness: 2
+  Top Tube: true
+Handlebar:
+  Handlebar Height: 50
+  Handlebar Length: 400
+Seat:
+  Seat Post: 150
+Wheels:
+  Tire Radius: 40
+  Tire Size: 700
