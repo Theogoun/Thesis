@@ -7,11 +7,11 @@
 2. **Cesium**  
    - Use Cesium to convert the map data into a 3D mesh compatible with Unity.
 
-3. **Blender**  
-   - Import a bicycle 3D model and configure its properties based on the specifications provided in the YAML file.
-
-4. **YAML File**  
+3. **YAML File**  
    - Define bicycle properties (e.g., dimensions, material) in the YAML file to ensure accurate modeling in Blender.
+
+4. **Blender**  
+   - Import a bicycle 3D model and configure its properties based on the specifications provided in the YAML file.
 
 5. **Unity**  
    - Integrate the 3D map from Cesium and the bicycle model from Blender into Unity.
