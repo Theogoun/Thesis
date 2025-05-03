@@ -1,8 +1,11 @@
 # Table of contents
 # Learn more at https://jupyterbook.org/customize/toc.html
-
+format: jb-book
 root: Thesis
-entries:
+chapters:
 - file: Introduction
 - file: Cesium
+- file: Unity
+  sections:
+  - file: Navmesh
 - file: glossary

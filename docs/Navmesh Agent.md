@@ -2,7 +2,12 @@
 
 In this project, the bicycle serves as the primary NavMesh Agent, navigating the environment generated from real-world geospatial data. By leveraging Unity’s NavMesh system, the bike can move across the terrain, avoiding obstacles and following predefined paths or dynamically calculated routes. 
 
-![Bicycle Agent](../Images/bicycleagent.png)
+```{figure} ../Images/bicycleagent.png
+---
+name: Cesium Georeference
+---
+Nav Mesh Agent
+```
  
 To ensure the bicycle behaves realistically within the simulation, the **NavMesh Agent** component is configured with specific parameters. These settings, as shown in the Unity inspector, define the bike's navigation and movement characteristics:  
 
