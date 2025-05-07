@@ -4,6 +4,7 @@ format: jb-book
 root: Thesis
 chapters:
 - file: Introduction
+- file: Methodology
 - file: Cesium
 - file: Unity
   sections:
