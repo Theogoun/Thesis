@@ -52,9 +52,6 @@ The bicycle agent implements multiple movement modes:
 - Supports looping behavior for continuous simulation
 - Maintains smooth progression between waypoints
 
-#### 3. Manual Control
-- Keyboard input (E key) for manual waypoint advancement during testing
-- Camera control (R key) for observation and debugging
 
 ### Obstacle Detection and Avoidance
 
@@ -103,11 +100,5 @@ The bicycle agent responds to different simulation states:
 - Efficient sphere casting for obstacle detection
 - Optimized pathfinding with automatic rerouting
 - Frame-rate independent movement using FixedUpdate for physics
-
-### Integration with Simulation
-The bicycle agent integrates seamlessly with the broader simulation system:
-- Responds to GameManager state changes
-- Interacts with human agents through obstacle detection
-- Supports both scripted and data-driven movement patterns
 
 This configuration enables realistic bicycle simulation within urban environments, supporting research into active mobility patterns and infrastructure optimization.

@@ -150,17 +150,3 @@ Human agents serve as dynamic obstacles for bicycle navigation:
 - Create realistic pedestrian-cyclist interaction scenarios
 - Enable study of mixed traffic dynamics
 
-### Research Applications
-- **Pedestrian Flow Analysis**: Study walking patterns in urban environments
-- **Infrastructure Planning**: Evaluate pedestrian space requirements
-- **Safety Research**: Analyze pedestrian-cyclist interaction points
-- **Behavioral Modeling**: Simulate realistic pedestrian decision-making
-
-### Scalability
-The human agent system supports:
-- Multiple simultaneous agents
-- Varying movement patterns per agent
-- Dynamic spawning and despawning
-- Configurable behavior parameters per instance
-
-This comprehensive human agent implementation enables realistic pedestrian simulation within the active mobility research framework, supporting detailed analysis of mixed transportation scenarios.
