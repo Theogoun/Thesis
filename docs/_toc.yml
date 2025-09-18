@@ -5,8 +5,12 @@ root: Thesis
 chapters:
 - file: Introduction
 - file: Methodology
-- file: Cesium
 - file: Unity
+- file: Cesium
   sections:
   - file: Navmesh
+- file: Namesh Agent
+  sections:
+  - file: Bicycle Agent
+  - file: Human Agent
 - file: glossary
