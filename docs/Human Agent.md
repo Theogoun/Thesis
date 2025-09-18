@@ -67,7 +67,33 @@ if (NavMesh.SamplePosition(randomDirection, out NavMeshHit hit, randomDestinatio
 
 ### Animation Integration
 
-The human agent includes sophisticated animation control:
+The human agent includes sophisticated animation control through a custom **Animator Controller** system designed to enhance the realism of agent movement in the simulation.
+
+#### Animation System and State Management
+
+The animation system is built around two key components:
+
+- **Entry and Initial Movement**: The animation system begins at the Entry point and proceeds into the **Movement** state. This ensures that the animation logic is initiated when the simulation starts.
+
+```{figure} ../Images/animation.png
+---
+name: Animation Controller
+---
+Animation Controller Entry and Movement State
+```
+
+- **Blend Tree for Dynamic Movements**: A **Blend Tree** allows for fluid transitions between different walking animations and an idle state. Controlled by the `MoveX` and `MoveY` parameters, the Blend Tree dynamically adjusts the character's animations to match the direction and speed of movement.
+
+```{figure} ../Images/blendtree.png
+---
+name: Blend Tree
+---
+Blend Tree for Dynamic Movement Animations
+```
+
+#### Animation Value Updates
+
+The animation values of the blend tree are set through a script in the human controller:
 
 ```csharp
 private void UpdateAnimationValues()
@@ -83,6 +109,8 @@ private void UpdateAnimationValues()
 - **Directional Movement**: Separate X and Y movement parameters for blend trees
 - **Smooth Transitions**: Continuous animation updates for natural movement
 - **Local Space Calculations**: Relative velocity for accurate directional animations
+- **State-Driven Logic**: Animation states that respond to simulation flow
+- **Blend Tree Control**: Dynamic animation blending based on movement direction and speed
 
 ### State Management
 

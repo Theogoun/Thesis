@@ -8,8 +8,9 @@ chapters:
 - file: Cesium
 - file: Unity
 - file: Navmesh
-- file: Namesh Agent
+- file: NavMesh Agent
   sections:
   - file: Bicycle Agent
   - file: Human Agent
+- file: The Simulation
 - file: glossary

@@ -77,7 +77,7 @@ The **Cesium Georeference** GameObject in Unity is responsible for aligning the 
 
 ```{figure} ../Images/campus.png
 ---
-name: Cesium Georeference
+name: Cesium 3D generated mesh
 ---
 Cesium georeference options
 ```
