@@ -2,37 +2,60 @@
 In order to have the bike transform into the desired measurements there needed to be a system that takes these values and applies them effectively. The definitive system was that of "key points", by placing those points in the places where the most important parts of the bike started or ended it is able to take the form and fill in the gaps as explained below. 
 
 The key points where condensed into 5 points in the 3D environment, for simplicity the Y axis will be 0 and any action will be done in the Z and X axes, the height and length of the bike respectively:
-
-- A: BB point (where the axle is) $$\begin{aligned}
-  Ax &= 0 \\
-  Az &= 0  
-  \end{aligned}
-  $$
-- B: End of Seat Tube C-C measurement$$
-  \begin{aligned}
-  Bx &= -\cos(HeadAngle) \cdot SeatTube \\
-  Bz &= \sin(SeatAngle) \cdot SeatTube
-  \end{aligned}
-  $$
-- C: Top of the Head Tube$$
-  \begin{aligned}
-  Cx &= Reach \\
-  Cz &= Stack
-  \end{aligned}
-  $$
-- D: Front Tire$$
-  \begin{aligned}
-  Dx &= Cx + \cos(HeadAngle) \cdot ForkLenght - \cos(HeadAngle+90) \cdot Rake \\
-  Dz &= Cz - \sin(HeadAngle) \cdot ForkLenght - \sin(HeadAngle+90) \cdot Rake
-  \end{aligned}
-  $$
-- E: Back Tire$$
-  \begin{aligned}
-  Ex &= Dx - WheelBase \\
-  Ez &= Dz
-  \end{aligned}
-  $$
   
+## Key Points and Their Coordinates
+
+### A: Bottom Bracket (BB) Point
+The origin of the bike's geometry, where the crank axle sits:
+
+$$
+\begin{aligned}
+A_x &= 0 \\
+A_z &= 0
+\end{aligned}
+$$
+
+### B: End of Seat Tube (C-C Measurement)
+Calculated from the BB using the seat tube length and seat angle:
+
+$$
+\begin{aligned}
+B_x &= -\cos(\theta_{seat}) \cdot L_{seat} \\
+B_z &= \sin(\theta_{seat}) \cdot L_{seat}
+\end{aligned}
+$$
+Where $\theta_{seat}$ is the seat tube angle, $L_{seat}$ is the seat tube length.
+
+### C: Top of the Head Tube
+Defined directly by the reach and stack measurements:
+
+$$
+\begin{aligned}
+C_x &= \text{Reach} \\
+C_z &= \text{Stack}
+\end{aligned}
+$$
+
+### D: Front Tire Contact Point
+Found by extending from the head tube using fork length, head angle, and rake (offset):
+
+$$
+\begin{aligned}
+D_x &= C_x + \cos(\theta_{head}) \cdot L_{fork} - \sin(\theta_{head}) \cdot R_{rake} \\
+D_z &= C_z - \sin(\theta_{head}) \cdot L_{fork} - \cos(\theta_{head}) \cdot R_{rake}
+\end{aligned}
+$$
+Where $\theta_{head}$ is the head tube angle, $L_{fork}$ is the fork length, $R_{rake}$ is the fork rake (offset).
+
+### E: Rear Tire Contact Point
+Located by subtracting the wheelbase from the front tire's x-position:
+
+$$
+\begin{aligned}
+E_x &= D_x - \text{Wheelbase} \\
+E_z &= D_z
+\end{aligned}
+$$
 ```{figure} ../Images/Points.png
 ---
 name: Points
@@ -108,7 +131,7 @@ Screenshot taken in Blender
   
 - **Right Chain part:** This part didn't need any kind of editing as it will always stay in the (0,0,0) position right in the middle with the A point.
 
-As seen in the [[Making the Model]] section the pedals are made of 4 parts as well. Each pedal needs these 4 parts to make it so the pedals don't spin in ways that weren't possible while riding a bike. For simplicity as shown in the picture in the section mentioned, the start of the pedal will be where it meets the bike and going down will be the end of the pedal.
+As seen in the [Making the Model](Making%20the%20Model.md) section, the pedals are made of 4 parts as well. Each pedal needs these 4 parts to make it so the pedals don't spin in ways that weren't possible while riding a bike. For simplicity, as shown in the picture in the section mentioned, the start of the pedal will be where it meets the bike and going down will be the end of the pedal.
 
 - **Bottom Bracket:** This is a component that isn't easily visible but both arms of the pedals have the **Copy Rotation** targeted to this one object to make sure they are synchronized, of course with the corrections to make it so they are facing opposite directions at all points.
   

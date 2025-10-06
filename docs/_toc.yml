@@ -2,22 +2,23 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 format: jb-book
 root: Thesis
+
 chapters:
-- file: Introduction
-- file: Methodology
-- file: Cesium
-- file: Blender
-  sections:
-    - file: Research
-    - file: Making the Model
-    - file: Setting the Rig
-    - file: Edit Script
-    - file: Biker
-- file: Unity
-- file: Navmesh
-- file: NavMesh Agent
-  sections:
-  - file: Bicycle Agent
-  - file: Human Agent
-- file: The Simulation
-- file: glossary
+  - file: Introduction
+  - file: Methodology
+  - file: Cesium
+  - file: Blender
+    sections:
+      - file: Research
+      - file: Making the Model
+      - file: Setting the Rig
+      - file: Edit Script
+      - file: Biker
+  - file: Unity
+  - file: Navmesh
+  - file: NavMesh Agent
+    sections:
+    - file: Bicycle Agent
+    - file: Human Agent
+  - file: The Simulation
+  - file: glossary

@@ -1,3 +1,4 @@
+# Blender
 Blender is a free and open-source 3D creation suite that covers almost the entire 3D pipeline in a single program. It’s widely used by hobbyists, indie creators, and even professionals in film, game development, and design. 
 
 The reason Blender is used for this project is mainly because of its versatility, it can do everything that is needed for this project in the same environment, these things include:
