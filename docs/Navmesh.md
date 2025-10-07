@@ -1,6 +1,6 @@
 # NavMesh
 
-A **NavMesh** (short for *Navigation Mesh*) is a data structure used in Unity and other game engines to facilitate pathfinding for characters or agents in a virtual environment. NavMeshes define the walkable areas of a scene, allowing non-player characters (NPCs) to navigate the environment realistically and avoid obstacles.
+A **NavMesh** (short for *Navigation Mesh*) is a data structure used in Unity and other game engines to facilitate pathfinding for agents in a virtual environment. NavMeshes define the walkable areas of a scene, allowing agents to navigate the environment realistically and avoid obstacles.
 
 ## How NavMesh Works In Unity? 
 
@@ -24,7 +24,7 @@ NavMesh Surface Component in Unity
 To generate the NavMesh, we use the **NavMesh Surface** component. Below are the key fields and their purposes:
 
 - **Agent Type**:  
-  Specifies the type of agent (e.g., humanoid, bicycle) for which the NavMesh is being generated. We are going to dive into more detail in the following chapters
+  Specifies the type of agent (e.g., pedestrian, bicycle) for which the NavMesh is being generated. We are going to dive into more detail in the following chapters
 
 - **Default Area**:  
   Defines the default area type (e.g., Walkable) for the NavMesh. This determines where agents can navigate.
