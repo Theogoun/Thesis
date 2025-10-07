@@ -1,5 +1,5 @@
 # Rig Explanation
-In order to have the bike transform into the desired measurements there needed to be a system that takes these values and applies them effectively. The definitive system was that of "key points", by placing those points in the places where the most important parts of the bike started or ended it is able to take the form and fill in the gaps as explained below. 
+To transform the bike into the desired measurements, a system was needed to interpret these values and apply them effectively. The final system used "key points", by placing these points at the locations where the most important parts of the bike begin or end, the model can take shape and fill in the gaps, as explained below.
 
 The key points where condensed into 5 points in the 3D environment, for simplicity the Y axis will be 0 and any action will be done in the Z and X axes, the height and length of the bike respectively:
   
