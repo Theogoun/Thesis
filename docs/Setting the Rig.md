@@ -24,6 +24,7 @@ B_x &= -\cos(\theta_{seat}) \cdot L_{seat} \\
 B_z &= \sin(\theta_{seat}) \cdot L_{seat}
 \end{aligned}
 $$
+
 Where $\theta_{seat}$ is the seat tube angle, $L_{seat}$ is the seat tube length.
 
 ### C: Top of the Head Tube
@@ -45,6 +46,7 @@ D_x &= C_x + \cos(\theta_{head}) \cdot L_{fork} - \sin(\theta_{head}) \cdot R_{r
 D_z &= C_z - \sin(\theta_{head}) \cdot L_{fork} - \cos(\theta_{head}) \cdot R_{rake}
 \end{aligned}
 $$
+
 Where $\theta_{head}$ is the head tube angle, $L_{fork}$ is the fork length, $R_{rake}$ is the fork rake (offset).
 
 ### E: Rear Tire Contact Point
