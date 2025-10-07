@@ -5,7 +5,7 @@ This section describes the step-by-step process of constructing the 3D bike mode
 
 ## 1. Building the Frame
 
-To begin, a simple prototype bike frame was created using cylinders—each representing one of the six main parts of the frame. These were aligned and measured by tracing over the example from the research paper referenced in the [Research](Research.md) section.
+To begin, a simple prototype bike frame was created using cylinders, each representing one of the six main parts of the frame. These were aligned and measured by tracing over the example from the research paper referenced in the [Research](Research.md) section.
 
 ```{figure} ../Images/Modeling.png
 ---
