@@ -1,6 +1,9 @@
-# Blender
+# 3D Models and Tools used
+
+## Blender
 Blender is a free and open-source 3D creation suite that covers almost the entire 3D pipeline in a single program. It’s widely used by hobbyists, indie creators, and even professionals in film, game development, and design. 
 
+## Why Blender
 The reason Blender is used for this project is mainly because of its versatility, it can do everything that is needed for this project in the same environment, these things include:
 
 - **Modeling:** The main frame of the bike as well as all parts of it like the seat and wheels will be different models that will contain several meshes that can be easily handled in Blender.
