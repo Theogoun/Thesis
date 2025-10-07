@@ -5,7 +5,7 @@ This section describes the setup and constraints used for the biker model and it
 
 ## Model Setup
 
-The biker model (including its armature) is the same as the one used for pedestrians in the simulation. The focus here is on editing the armature so the biker sits correctly, with arms and legs in the right places for any bike created by the script. While not required for the simulation to function, the biker is used for the loading animation.
+The biker model and it's armature is the same as the one used for pedestrians in the simulation. The focus here is on editing the armature so that the biker sits correctly, with arms and legs in the right places for any bike created by the script. While the biker is not required for the simulation to function he is used for the loading animation.
 
 ```{figure} ../Images/Biker.png
 ---
@@ -15,7 +15,7 @@ Screenshot taken in Blender showing the Armature of the biker
 ```
 
 ### Reference Points (Empties)
-The model does not have collision, so to ensure the biker sits on or touches the bike (not inside it), several empties are created as reference points:
+The model does not have collision, so to ensure the biker sits on or touches the bike and not be inside it, several empties are created as reference points:
 
 - **Seat:** An empty is placed slightly above the seat mesh, which becomes its parent. This ensures the seat reference is always in the correct place for the biker to sit.
 - **Handlebars:** Two empties are placed over the handlebar (one for each hand), both parented to the handlebar so they move with it.
@@ -31,7 +31,7 @@ The main constraints used are:
 
 ### Constraint Setup
 
-- **Hands:** IK constraint targets the handlebar empties; Limit Rotation keeps hands perpendicular to the floor and prevents collision with the bar.
+- **Hands:** IK constraint targets the handlebar empties; Limit Rotation keeps hands parallel to the floor and prevents collision with the bar.
 - **Hip:** Copy Location constraint targets the seat empty.
 - **Head:** Limit Rotation constraint keeps the head facing forward.
 
