@@ -115,3 +115,11 @@ Set_Scale("SizeF", Wheel_Size / 1000, Wheel_Size / 1000, 0)
 Set_Scale("SizeB", Wheel_Size / 1000, Wheel_Size / 1000, 0)
 ```
 
+## Examples
+
+```{figure} ../Images/examples.png
+---
+name: examples
+---
+Four example bikes made with the code.
+```
