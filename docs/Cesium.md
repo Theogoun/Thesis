@@ -1,4 +1,6 @@
-# Cesium
+# 3D Environment Setup
+
+## Cesium
 
 Cesium is an open platform for 3D geospatial data visualization. It allows developers to create highly accurate, real-world simulations using geographic data. Cesium provides tools for streaming, visualizing, and interacting with large-scale 3D geospatial datasets, such as terrain, building models, and map imagery, in a performant and dynamic way.
 
