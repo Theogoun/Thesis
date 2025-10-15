@@ -1,0 +1,3 @@
+# Conclusion
+
+In conclusion, the application is currently in a state where it can accurately depict the data presented to it and can apply, as well as create, simple case studies of active movement in a specific built environment which can help experts with their research and the display of said research. As there are a lot of tools on this topic this one is a lot more accessible for the simple reason that it is something to show the research as much as conduct it. As for the future of this application, the few things that could be added are other vehicles like cars, a way to change the location easily, and a more sophisticated way to change the behavior of the pedestrians.

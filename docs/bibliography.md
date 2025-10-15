@@ -1,4 +1,4 @@
-# Βιβλιογραφία
+# Bibliography
 
 ```{bibliography}
 :style: unsrt
