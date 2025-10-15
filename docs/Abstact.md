@@ -1,3 +1,5 @@
+# Abstract
+
 Walking, cycling and other active modes can bring health benefits associated with an active lifestyle, and they are low-cost and emission-free! In order to develop their full potential, these modes need to be properly addressed in urban mobility policy at all levels of governance, including aspects related to funding, transport planning, awareness-raising, allocation of space, safety regulations and adequate infrastructure, while bearing in mind a specific focus on people with reduced mobility.
 
 -- Edited --

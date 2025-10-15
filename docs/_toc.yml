@@ -4,8 +4,9 @@ format: jb-book
 root: Thesis
 
 chapters:
+  - file: Abstact
   - file: Introduction
-  - file: Methodology
+  - file: Pipeline
   - file: Cesium
   - file: Blender
     sections:
@@ -16,9 +17,10 @@ chapters:
       - file: Biker
   - file: Unity
   - file: Navmesh
-  - file: NavMesh Agent
+  - file: Navmesh Agent
     sections:
     - file: Bicycle Agent
     - file: Human Agent
   - file: The Simulation
   - file: glossary
+  - file: bibliography
