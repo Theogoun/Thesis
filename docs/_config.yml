@@ -45,19 +45,17 @@ latex:
       \newcommand{\thesisacknowledgements}[1]{\chapter*{Acknowledgements}\addcontentsline{toc}{chapter}{Acknowledgements}#1\newpage}
       \newcommand{\thesisdedication}[1]{\chapter*{Dedication}#1\newpage}
     maketitle: |
-      % Custom title page for thesis
+      % Custom Greek thesis title page with logo
       \begin{titlepage}
         \centering
-        {\Huge\bfseries Unity-based Simulation of Active Transport in Built Environment\par}
-        \vspace{1.5cm}
-        {\Large Dimitrios Dimitriadis, Thodoris Gounelas\par}
-        \vspace{1.5cm}
-        {\large A thesis submitted in partial fulfillment of the requirements for the degree of\par}
-        {\large Master of Science\par}
-        \vspace{1.5cm}
-        {\large Department of ...\par}
-        {\large University Name\par}
-        \vspace{2cm}
+        \vspace*{1cm}
+        \includegraphics[width=0.18\textwidth]{unilogo.png}\\[1.5cm]
+        {\fontsize{18}{22}\selectfont\textbf{ΠΑΝΕΠΙΣΤΗΜΙΟ ΘΕΣΣΑΛΙΑΣ}\\[0.5em]}
+        {\large Σχολή Τεχνολογίας \\[0.5em] Τμήμα Ψηφιακών Συστημάτων \\[2em]}
+        {\fontsize{24}{28}\selectfont\textbf{Τίτλος Πτυχιακής}\\[2em]}
+        {\large \textbf{ΠΤΥΧΙΑΚΗ ΕΡΓΑΣΙΑ} \\[1.5em]}
+        {\large Ονοματεπώνυμο (AM: ?) \\[1.5em]}
+        {\large Επιβλέπων: ονομ/μο, βαθμίδα \\[2em]}
         {\large \today\par}
         \vfill
       \end{titlepage}
