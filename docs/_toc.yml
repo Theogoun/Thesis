@@ -4,9 +4,7 @@ format: jb-book
 root: Thesis
 
 chapters:
-  - file: Abstact
   - file: Introduction
-  - file: Pipeline
   - file: Cesium
   - file: Blender
     sections:
@@ -22,6 +20,5 @@ chapters:
     - file: Bicycle Agent
     - file: Human Agent
   - file: The Simulation
-  - file: glossary
   - file: Conclusion
-  - file: bibliography
+  - file: glossary

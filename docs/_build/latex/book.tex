@@ -87,7 +87,7 @@
         
 
 \title{Unity-based Simulation of Active Transport in Built Environment}
-\date{Oct 15, 2025}
+\date{Nov 29, 2025}
 \release{}
 \author{Dimitrios Dimitriadis, Thodoris Gounelas}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -180,118 +180,37 @@ Note : Obsidian uses \sphinxhref{https://help.obsidian.md/Linking+notes+and+file
 \sphinxstepscope
 
 
-\chapter{Abstract}
-\label{\detokenize{Abstact:abstract}}\label{\detokenize{Abstact::doc}}
-\sphinxAtStartPar
-Active mobility within urban environments has become increasingly crucial for public health and sustainable transportation systems. While significant efforts focus on infrastructure development—such as bicycle lanes and pedestrian pathways—research into mobility patterns and behavioral analysis remains essential for evidence\sphinxhyphen{}based urban planning. This thesis presents a comprehensive simulation application designed to facilitate research and visualization of active mobility scenarios in built environments. The application serves dual purposes: providing researchers with sophisticated analytical tools for conducting case studies, while maintaining accessibility for stakeholders with varying technical expertise. Through intuitive visualization and interactive demonstration capabilities, the platform enables effective communication of research findings and supports informed decision\sphinxhyphen{}making in urban mobility planning.
-
-
-\section{Περίληψη}
-\label{\detokenize{Abstact:id1}}
-\sphinxAtStartPar
-Η ενεργή κινητικότητα στα αστικά περιβάλλοντα έχει καταστεί ολοένα και πιο καθοριστική για τη δημόσια υγεία και τα βιώσιμα συστήματα μεταφοράς. Ενώ σημαντικές προσπάθειες εστιάζουν στην ανάπτυξη υποδομών—όπως ποδηλατόδρομοι και πεζόδρομοι—η έρευνα σχετικά με τα πρότυπα κινητικότητας και την ανάλυση συμπεριφοράς παραμένει ουσιώδης για τον τεκμηριωμένο αστικό σχεδιασμό. Η παρούσα διπλωματική εργασία παρουσιάζει μια ολοκληρωμένη εφαρμογή προσομοίωσης που σχεδιάστηκε για να διευκολύνει την έρευνα και την οπτικοποίηση σεναρίων ενεργής κινητικότητας σε δομημένα περιβάλλοντα. Η εφαρμογή εξυπηρετεί δυπλό σκοπό: παρέχει στους ερευνητές εξελιγμένα αναλυτικά εργαλεία για τη διεξαγωγή μελετών περίπτωσης, διατηρώντας παράλληλα την προσβασιμότητα για ενδιαφερόμενους με διαφορετικό επίπεδο τεχνικής εμπειρίας. Μέσω διαισθητικής οπτικοποίησης και διαδραστικών δυνατοτήτων επίδειξης, η πλατφόρμα επιτρέπει την αποτελεσματική επικοινωνία των ερευνητικών ευρημάτων και υποστηρίζει τη λήψη τεκμηριωμένων αποφάσεων στον σχεδιασμό αστικής κινητικότητας.
-
-\sphinxstepscope
-
-
 \chapter{Introduction}
 \label{\detokenize{Introduction:introduction}}\label{\detokenize{Introduction::doc}}
 
-\section{Project Summary}
-\label{\detokenize{Introduction:project-summary}}
+\section{Topic and Context}
+\label{\detokenize{Introduction:topic-and-context}}
 \sphinxAtStartPar
-This thesis focuses on the development of an \sphinxstylestrong{active movement simulation in a built environment} using the \sphinxstylestrong{cesium SDK, Unity, and Blender}. The project involves creating a \sphinxstylestrong{simplified 3D representation of a real environment} by integrating \sphinxstylestrong{geospatial data} from \sphinxstylestrong{google maps} retrieved via the \sphinxstylestrong{cesium SDK}. Through \sphinxstylestrong{Blender}, a modifiable bike model is created, allowing for the simulation of various bike designs based on specific measurements, along with a rider.
+Active mobility, encompassing modes like cycling and walking, plays a vital role in creating sustainable, healthy urban environments amid growing urbanization and climate concerns. Urban planners and researchers face challenges in evaluating how built environments influence active traveler safety, efficiency, and comfort due to the limitations of real\sphinxhyphen{}world data collection and ethical constraints on experiments.
 
 
-\section{Purpose}
-\label{\detokenize{Introduction:purpose}}
+\section{Research Gaps}
+\label{\detokenize{Introduction:research-gaps}}
 \sphinxAtStartPar
-The goal of this tool is to create a simulation that allows for the study of various cases by simulating different scenarios, providing insights into the dynamics of {\hyperref[\detokenize{glossary:active-mobility}]{\sphinxcrossref{\DUrole{std,std-ref}{active mobility}}}} in built environments, , enabling researchers and urban planners to analyze and optimize infrastructure for active mobility, fostering safer and more efficient urban environments.
+Current research highlights gaps in understanding these dynamics, as traditional methods often rely on static models or simplified 2D representations that fail to capture realistic 3D interactions between users, vehicles, and infrastructure. While geospatial tools and game engines have advanced virtual simulations, few integrate parametric modeling of active mobility assets—like customizable bicycles—with high\sphinxhyphen{}fidelity urban 3D reconstructions for scenario testing.
+
+
+\section{Aims and Objectives}
+\label{\detokenize{Introduction:aims-and-objectives}}
+\sphinxAtStartPar
+This thesis addresses these gaps by developing a simulation framework for active movement in built environments. The central aim is to enable researchers and urban planners to explore diverse scenarios, revealing insights into mobility dynamics and informing infrastructure optimizations for safer cities.
+
+
+\section{Research Focus}
+\label{\detokenize{Introduction:research-focus}}
+\sphinxAtStartPar
+The research focuses on a specific pipeline using Cesium SDK for geospatial integration, Blender for parametric bike and rider modeling, and Unity for simulation, targeting real\sphinxhyphen{}world locations via Google Maps data. Key objectives include creating modifiable 3D assets driven by YAML configurations and demonstrating their application in Unity\sphinxhyphen{}based movement analysis.
 
 
 \section{Pipeline}
 \label{\detokenize{Introduction:pipeline}}
-\begin{figure}[htbp]
-\centering
-\capstart
-
-\noindent\sphinxincludegraphics{{plan}.png}
-\caption{Pipeline of project}\label{\detokenize{Introduction:id1}}\end{figure}
-\begin{enumerate}
-\sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
-\item {} 
 \sphinxAtStartPar
-\sphinxstylestrong{Google 3D Maps}
-\begin{itemize}
-\item {} 
-\sphinxAtStartPar
-Retrieve map data from Google 3D Maps for the target location.
-
-\end{itemize}
-
-\item {} 
-\sphinxAtStartPar
-\sphinxstylestrong{Cesium}
-\begin{itemize}
-\item {} 
-\sphinxAtStartPar
-Use Cesium to convert the map data into a 3D mesh compatible with Unity.
-
-\end{itemize}
-
-\item {} 
-\sphinxAtStartPar
-\sphinxstylestrong{YAML File}
-\begin{itemize}
-\item {} 
-\sphinxAtStartPar
-Define bicycle properties (e.g., dimensions, measurements) in the YAML file to ensure accurate modeling in Blender.
-
-\end{itemize}
-
-\item {} 
-\sphinxAtStartPar
-\sphinxstylestrong{Blender}
-\begin{itemize}
-\item {} 
-\sphinxAtStartPar
-Creation of a modifiable 3D model of a bike and rider that will change based on the specifications provided in the YAML file.
-
-\end{itemize}
-
-\item {} 
-\sphinxAtStartPar
-\sphinxstylestrong{Unity}
-\begin{itemize}
-\item {} 
-\sphinxAtStartPar
-Integrate the 3D map from Cesium and the bicycle model from Blender into Unity.
-
-\item {} 
-\sphinxAtStartPar
-Use Unity to simulate the environment and interactions.
-
-\end{itemize}
-
-\item {} 
-\sphinxAtStartPar
-\sphinxstylestrong{Simulation}
-\begin{itemize}
-\item {} 
-\sphinxAtStartPar
-Run the simulation in Unity to test and analyze movement mobility.
-
-\end{itemize}
-
-\end{enumerate}
-
-\sphinxstepscope
-
-
-\chapter{Pipeline}
-\label{\detokenize{Pipeline:pipeline}}\label{\detokenize{Pipeline::doc}}
-\sphinxAtStartPar
-\sphinxincludegraphics{{plan}.png}
+\sphinxincludegraphics{plan.png}
 \begin{enumerate}
 \sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
 \item {} 
@@ -363,8 +282,8 @@ Run the simulation in Unity to test and analyze movement mobility.
 \sphinxstepscope
 
 
-\chapter{3D Environment Setup}
-\label{\detokenize{Cesium:d-environment-setup}}\label{\detokenize{Cesium::doc}}
+\chapter{3D Mesh Creation}
+\label{\detokenize{Cesium:d-mesh-creation}}\label{\detokenize{Cesium::doc}}
 
 \section{Cesium}
 \label{\detokenize{Cesium:cesium}}
@@ -404,7 +323,7 @@ To utilize real\sphinxhyphen{}world geospatial data in Unity, we rely on the \sp
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{{cesium-ion-assets}.png}
+\noindent\sphinxincludegraphics{cesium-ion-assets.png}
 \caption{Cesium terrain options}\label{\detokenize{Cesium:ion-assets}}\end{figure}
 
 \sphinxAtStartPar
@@ -452,7 +371,7 @@ For our specific purpose, we are utilizing the \sphinxstylestrong{Google Photore
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{{cesium-georeference}.png}
+\noindent\sphinxincludegraphics{cesium-georeference.png}
 \caption{Cesium georeference options}\label{\detokenize{Cesium:cesium-georeference}}\end{figure}
 
 \sphinxAtStartPar
@@ -497,7 +416,7 @@ Allows you to override the default Cesium Ellipsoid if a custom ellipsoid is req
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{{campus}.png}
+\noindent\sphinxincludegraphics{campus.png}
 \caption{Cesium georeference options}\label{\detokenize{Cesium:cesium-3d-generated-mesh}}\end{figure}
 
 \sphinxAtStartPar
@@ -578,7 +497,7 @@ The first step was to identify the correct terms for every part and measurement 
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{{Bike_Parts}.png}
+\noindent\sphinxincludegraphics{Bike_Parts.png}
 \caption{Bike parts found in \sphinxhref{https://www.bikelockwiki.com}{bikelockwiki.com}}\label{\detokenize{Research:bike-parts}}\end{figure}
 \begin{itemize}
 \item {} 
@@ -597,7 +516,7 @@ To create a base prototype for the bike, a temporary template was needed. This w
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{{Bike_Reference}.png}
+\noindent\sphinxincludegraphics{Bike_Reference.png}
 \caption{Image taken from the \sphinxhref{https://www.researchgate.net/figure/Basic-dimensions-of-on-road-bicycle-frame-model\_fig2\_295675697}{research paper}}\label{\detokenize{Research:bike-reference}}\end{figure}
 
 
@@ -660,7 +579,7 @@ More information on how these are used can be found in the {[}{[}Setting the Rig
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{{Bike_Geometry}.png}
+\noindent\sphinxincludegraphics{Bike_Geometry.png}
 \caption{Bike geometry found in \sphinxhref{https://geometrygeeks.bike}{geometrygeeks.bike}}\label{\detokenize{Research:bike-geometry}}\end{figure}
 
 
@@ -687,7 +606,7 @@ To begin, a simple prototype bike frame was created using cylinders, each repres
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{{Modeling}.png}
+\noindent\sphinxincludegraphics{Modeling.png}
 \caption{Screenshot taken in Blender}\label{\detokenize{Making the Model:modeling}}\end{figure}
 
 \sphinxAtStartPar
@@ -697,7 +616,7 @@ After establishing the standard frame, the Seat Stays and Chain Stays were split
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{{Modeling_Final}.png}
+\noindent\sphinxincludegraphics{Modeling_Final.png}
 \caption{Screenshot taken in Blender}\label{\detokenize{Making the Model:modeling-final}}\end{figure}
 
 
@@ -710,7 +629,7 @@ The wheels were modeled early in the process, as they do not interfere with the 
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{{Wheel}.png}
+\noindent\sphinxincludegraphics{Wheel.png}
 \caption{Screenshot taken in Blender}\label{\detokenize{Making the Model:wheel}}\end{figure}
 
 
@@ -723,7 +642,7 @@ To ensure the pedals functioned as intended, each pedal was split into four part
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{{Pedal}.png}
+\noindent\sphinxincludegraphics{Pedal.png}
 \caption{Screenshot taken in Blender}\label{\detokenize{Making the Model:pedal}}\end{figure}
 
 \sphinxAtStartPar
@@ -733,7 +652,7 @@ Due to their complexity, the chain was divided into four stationary pieces (left
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{{Chain}.png}
+\noindent\sphinxincludegraphics{Chain.png}
 \caption{Screenshot taken in Blender}\label{\detokenize{Making the Model:chain}}\end{figure}
 
 
@@ -746,7 +665,7 @@ With all major parts complete, minor refinements were made: adding the rake to p
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{{Model}.png}
+\noindent\sphinxincludegraphics{Model.png}
 \caption{Screenshot taken in Blender}\label{\detokenize{Making the Model:model}}\end{figure}
 
 \sphinxstepscope
@@ -838,7 +757,7 @@ E_z &= D_z
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{{Points}.png}
+\noindent\sphinxincludegraphics{Points.png}
 \caption{Simple illustration of the points’ position.}\label{\detokenize{Setting the Rig:points}}\end{figure}
 \begin{itemize}
 \item {} 
@@ -902,7 +821,7 @@ Similarly the way the bones are connected in an armature is very important as it
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{{Bones}.png}
+\noindent\sphinxincludegraphics{Bones.png}
 \caption{Screenshot taken in blender}\label{\detokenize{Setting the Rig:bones}}\end{figure}
 
 \sphinxAtStartPar
@@ -918,7 +837,7 @@ A total of 2 armatures were made for this part, one for the frame of the bike an
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{{Bike_Rigs}.png}
+\noindent\sphinxincludegraphics{Bike_Rigs.png}
 \caption{Screenshot taken in Blender}\label{\detokenize{Setting the Rig:bike-rigs}}\end{figure}
 
 \sphinxAtStartPar
@@ -1178,7 +1097,7 @@ Transform wheels as needed using \sphinxcode{\sphinxupquote{Set\_Scale()}}:
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{{examples}.png}
+\noindent\sphinxincludegraphics{examples.png}
 \caption{Four example bikes made with the code.}\label{\detokenize{Edit Script:id1}}\end{figure}
 
 \sphinxstepscope
@@ -1199,7 +1118,7 @@ The biker model and it’s armature is the same as the one used for pedestrians 
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{{Biker}.png}
+\noindent\sphinxincludegraphics{Biker.png}
 \caption{Screenshot taken in Blender showing the Armature of the biker}\label{\detokenize{Biker:id1}}\end{figure}
 
 
@@ -1263,7 +1182,7 @@ The main constraints used are:
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{{Biker_Top}.png}
+\noindent\sphinxincludegraphics{Biker_Top.png}
 \caption{Picture showcasing the upper body.}\label{\detokenize{Biker:biker-top}}\end{figure}
 \begin{itemize}
 \item {} 
@@ -1284,7 +1203,7 @@ The main constraints used are:
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{{Biker_Bot}.png}
+\noindent\sphinxincludegraphics{Biker_Bot.png}
 \caption{Picture showcasing the lower body.}\label{\detokenize{Biker:biker-bot}}\end{figure}
 
 
@@ -1294,7 +1213,7 @@ The main constraints used are:
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{{Biker_All}.png}
+\noindent\sphinxincludegraphics{Biker_All.png}
 \caption{Final result of biker.}\label{\detokenize{Biker:biker-all}}\end{figure}
 
 \sphinxstepscope
@@ -1371,7 +1290,7 @@ A \sphinxstylestrong{NavMesh} (short for \sphinxstyleemphasis{Navigation Mesh}) 
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{{navmeshsurface}.png}
+\noindent\sphinxincludegraphics{navmeshsurface.png}
 \caption{NavMesh Surface Component in Unity}\label{\detokenize{Navmesh:navmesh-surface}}\end{figure}
 
 \sphinxAtStartPar
@@ -1403,7 +1322,7 @@ Determines which objects in the scene are included when baking the NavMesh. This
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{{navmesh}.png}
+\noindent\sphinxincludegraphics{navmesh.png}
 \caption{Generated Navmesh for human actors}\label{\detokenize{Navmesh:id1}}\end{figure}
 
 \sphinxAtStartPar
@@ -1551,7 +1470,7 @@ The bicycle agent leverages Unity’s NavMesh system to navigate complex terrain
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{{bicycleagent}.png}
+\noindent\sphinxincludegraphics{bicycleagent.png}
 \caption{Nav Mesh Agent \sphinxhyphen{} Bicycle Configuration}\label{\detokenize{Bicycle Agent:id1}}\end{figure}
 
 \sphinxAtStartPar
@@ -1807,7 +1726,7 @@ Human agents use Unity’s NavMesh system to simulate realistic pedestrian movem
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{{humanagent}.png}
+\noindent\sphinxincludegraphics{humanagent.png}
 \caption{Nav Mesh Agent \sphinxhyphen{} Human Configuration}\label{\detokenize{Human Agent:id1}}\end{figure}
 
 \sphinxAtStartPar
@@ -1966,7 +1885,7 @@ The animation system is built around two key components:
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{{animation}.png}
+\noindent\sphinxincludegraphics{animation.png}
 \caption{Animation Controller Entry and Movement State}\label{\detokenize{Human Agent:animation-controller}}\end{figure}
 \begin{itemize}
 \item {} 
@@ -1979,7 +1898,7 @@ The animation system is built around two key components:
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{{blendtree}.png}
+\noindent\sphinxincludegraphics{blendtree.png}
 \caption{Blend Tree for Dynamic Movement Animations}\label{\detokenize{Human Agent:blend-tree}}\end{figure}
 
 
@@ -2208,7 +2127,7 @@ The simulation is built as an interactive Unity application that allows users to
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{{simulation}.png}
+\noindent\sphinxincludegraphics{simulation.png}
 \caption{The main simulation interface showing agent placement options}\label{\detokenize{The Simulation:simulation-interface}}\end{figure}
 
 
@@ -2262,7 +2181,7 @@ Once an agent is placed in the scene, clicking on it reveals a configuration pan
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{{humanoptions}.png}
+\noindent\sphinxincludegraphics{humanoptions.png}
 \caption{Configuration panel for human agent parameters}\label{\detokenize{The Simulation:human-options-panel}}\end{figure}
 \begin{itemize}
 \item {} 
@@ -2294,7 +2213,7 @@ Once an agent is placed in the scene, clicking on it reveals a configuration pan
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{{bicycle_options}.png}
+\noindent\sphinxincludegraphics{bicycle_options.png}
 \caption{Configuration panel for bicycle agent parameters}\label{\detokenize{The Simulation:bicycle-options-panel}}\end{figure}
 \begin{itemize}
 \item {} 
@@ -2407,14 +2326,14 @@ A key feature of the simulation is the ability to switch to first\sphinxhyphen{}
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{{human_view}.png}
+\noindent\sphinxincludegraphics{human_view.png}
 \caption{First\sphinxhyphen{}person perspective from a human agent showing the campus environment}\label{\detokenize{The Simulation:human-agent-first-person-view}}\end{figure}
 
 \begin{figure}[htbp]
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{{bicycle_view}.png}
+\noindent\sphinxincludegraphics{bicycle_view.png}
 \caption{First\sphinxhyphen{}person perspective from a bicycle agent navigating through the simulation}\label{\detokenize{The Simulation:bicycle-agent-first-person-view}}\end{figure}
 \begin{enumerate}
 \sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
@@ -2460,35 +2379,6 @@ Environmental factors that influence navigation decisions
 \sphinxstepscope
 
 
-\chapter{Glossary}
-\label{\detokenize{glossary:glossary}}\label{\detokenize{glossary::doc}}
-
-\section{Active mobility}
-\label{\detokenize{glossary:active-mobility}}
-\sphinxAtStartPar
-The transport of people or goods, through non\sphinxhyphen{}motorized means, based around human physical activity.
-
-
-\section{Mesh}
-\label{\detokenize{glossary:mesh}}
-\sphinxAtStartPar
-The foundational element of a 3D object, a collection of vertices (points), edges (lines connecting vertices), and faces (flat surfaces enclosed by edges) that defines an object’s shape.
-
-
-\section{Armature}
-\label{\detokenize{glossary:armature}}
-\sphinxAtStartPar
-An object that serves as a skeleton for rigging and animating other objects, allowing complex deformations to be controlled through a hierarchy of individual bones.
-
-
-\section{Bone}
-\label{\detokenize{glossary:bone}}
-\sphinxAtStartPar
-A basic element of an armature, a skeletal structure used for rigging and animating characters and objects.
-
-\sphinxstepscope
-
-
 \chapter{Conclusion}
 \label{\detokenize{Conclusion:conclusion}}\label{\detokenize{Conclusion::doc}}
 \sphinxAtStartPar
@@ -2497,8 +2387,98 @@ In conclusion, the application is currently in a state where it can accurately d
 \sphinxstepscope
 
 
-\chapter{Bibliography}
-\label{\detokenize{bibliography:bibliography}}\label{\detokenize{bibliography::doc}}\phantomsection\label{\detokenize{bibliography:id1}}
+\chapter{Glossary}
+\label{\detokenize{glossary:glossary}}\label{\detokenize{glossary::doc}}
+\sphinxAtStartPar
+\sphinxstylestrong{Active Mobility}
+
+\sphinxAtStartPar
+The transport of people or goods through non\sphinxhyphen{}motorized means, based on human physical activity. Examples include walking, cycling, skateboarding, and wheelchair use. Active mobility is a sustainable transportation mode that promotes physical health, reduces environmental impact, and enhances urban livability.
+
+\sphinxAtStartPar
+\sphinxstylestrong{Agent}
+
+\sphinxAtStartPar
+In the context of simulation and game development, an autonomous entity that can perceive its environment and make decisions to achieve specific goals. Agents typically use navigation systems (such as NavMesh) to move through virtual environments while avoiding obstacles and following paths.
+
+\sphinxAtStartPar
+\sphinxstylestrong{Animation}
+
+\sphinxAtStartPar
+The process of creating motion and shape changes in 3D models over time. In character animation, this involves manipulating bones within an armature to create realistic movements such as walking, running, or cycling. Animations can be keyframe\sphinxhyphen{}based, procedural, or physics\sphinxhyphen{}driven.
+
+\sphinxAtStartPar
+\sphinxstylestrong{Armature}
+
+\sphinxAtStartPar
+A hierarchical skeleton structure used for rigging and animating 3D models. An armature consists of interconnected bones that define how a mesh deforms during animation. By controlling the armature, animators can create complex, realistic movements while maintaining the model’s volume and proportions.
+
+\sphinxAtStartPar
+\sphinxstylestrong{Blend Tree}
+
+\sphinxAtStartPar
+A Unity animation feature that smoothly blends between multiple animation clips based on parameter values. Blend trees enable fluid transitions between different movement states (e.g., walking to running) and allow for directional movement by combining multiple animations.
+
+\sphinxAtStartPar
+\sphinxstylestrong{Bone}
+
+\sphinxAtStartPar
+An individual element within an armature that represents a joint or skeletal segment. Bones are connected in parent\sphinxhyphen{}child relationships to form a hierarchical structure. When a bone moves or rotates, all of its children move with it, allowing for coordinated motion similar to a real skeleton.
+
+\sphinxAtStartPar
+\sphinxstylestrong{Built Environment}
+
+\sphinxAtStartPar
+The human\sphinxhyphen{}made surroundings that provide the setting for human activity, ranging from buildings and parks to neighborhoods and cities. In this thesis, the built environment refers to the 3D digital representation of urban spaces used for simulating active transport scenarios.
+
+\sphinxAtStartPar
+\sphinxstylestrong{Cesium}
+
+\sphinxAtStartPar
+A platform for creating 3D geospatial applications. Cesium for Unity enables the integration of real\sphinxhyphen{}world terrain, imagery, and 3D tiles into Unity projects, allowing for accurate geographic visualization and simulation of real\sphinxhyphen{}world locations.
+
+\sphinxAtStartPar
+\sphinxstylestrong{Mesh}
+
+\sphinxAtStartPar
+The foundational geometric structure of a 3D object, consisting of vertices (points in 3D space), edges (lines connecting vertices), and faces (flat polygons enclosed by edges). The mesh defines the object’s shape and surface, and can be manipulated through modeling, sculpting, or procedural generation.
+
+\sphinxAtStartPar
+\sphinxstylestrong{NavMesh (Navigation Mesh)}
+
+\sphinxAtStartPar
+A data structure that represents the walkable surfaces in a 3D environment. The NavMesh is used by navigation agents to calculate efficient paths while avoiding obstacles. It defines where characters can move and is essential for realistic autonomous movement in simulations and games.
+
+\sphinxAtStartPar
+\sphinxstylestrong{NavMesh Agent}
+
+\sphinxAtStartPar
+A Unity component that enables autonomous navigation using the NavMesh. NavMesh Agents can pathfind to destinations, avoid obstacles, and navigate complex environments. They have configurable parameters such as speed, acceleration, radius, and height that define their movement characteristics.
+
+\sphinxAtStartPar
+\sphinxstylestrong{Rigging}
+
+\sphinxAtStartPar
+The process of creating a skeletal structure (armature) for a 3D model and binding the model’s mesh to that structure. Rigging involves defining bones, setting up hierarchies, creating constraints, and painting weight maps that determine how the mesh deforms when bones move.
+
+\sphinxAtStartPar
+\sphinxstylestrong{Simulation}
+
+\sphinxAtStartPar
+A computer\sphinxhyphen{}based representation of a real\sphinxhyphen{}world system or process. In this thesis, simulation refers to the virtual modeling of active transport scenarios in urban environments, including the behavior and interactions of cyclists and pedestrians within the built environment.
+
+\sphinxAtStartPar
+\sphinxstylestrong{Unity}
+
+\sphinxAtStartPar
+A cross\sphinxhyphen{}platform game engine and development environment used for creating 3D and 2D interactive content. Unity provides tools for rendering, physics simulation, animation, scripting, and more. In this thesis, Unity serves as the simulation engine for modeling active transport scenarios.
+
+\sphinxAtStartPar
+\sphinxstylestrong{Vertex (plural: Vertices)}
+
+\sphinxAtStartPar
+A point in 3D space defined by X, Y, and Z coordinates. Vertices are the fundamental building blocks of 3D meshes. Connected vertices form edges, and enclosed edges form faces. The position and manipulation of vertices determine the shape of 3D objects.
+
 
 
 
@@ -2507,4 +2487,10 @@ In conclusion, the application is currently in a state where it can accurately d
 
 \renewcommand{\indexname}{Index}
 \printindex
+
+% Bibliography
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{references}
+
 \end{document}

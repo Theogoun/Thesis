@@ -59,6 +59,8 @@ latex:
         {\large \today\par}
         \vfill
       \end{titlepage}
+  latex_additional_files:
+    - references.bib
 
 # Add a bibtex file so that we can create citations
 bibtex_bibfiles:
@@ -94,6 +96,8 @@ parse:
 sphinx:
   config:
     jblatex_captions_to_parts: false
+    bibtex_bibfiles: ['references.bib']
+    bibtex_reference_style: author_year
     html_theme_options:
         use_download_button: false
         repository_url: https://github.com/onoufrios/numan
@@ -101,4 +105,6 @@ sphinx:
         use_issues_button: false
         use_repository_button: false
         use_edit_page_button: false
+  extra_extensions:
+    - sphinxcontrib.bibtex
 

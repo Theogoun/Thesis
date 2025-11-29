@@ -2,4 +2,5 @@
 
 ```{bibliography}
 :style: unsrt
+:all:
 ```

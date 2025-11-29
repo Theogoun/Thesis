@@ -1,22 +1,24 @@
 # Introduction
 
-## Project Summary
-This thesis focuses on the development of an **active movement simulation in a built environment** using the **cesium SDK, Unity, and Blender**. The project involves creating a **simplified 3D representation of a real environment** by integrating **geospatial data** from **google maps** retrieved via the **cesium SDK**. Through **Blender**, a modifiable bike model is created, allowing for the simulation of various bike designs based on specific measurements, along with a rider.
+## Topic and Context
 
-## Purpose
+Active mobility, encompassing modes like cycling and walking, plays a vital role in creating sustainable, healthy urban environments amid growing urbanization and climate concerns. Urban planners and researchers face challenges in evaluating how built environments influence active traveler safety, efficiency, and comfort due to the limitations of real-world data collection and ethical constraints on experiments.
 
-The goal of this tool is to create a simulation that allows for the study of various cases by simulating different scenarios, providing insights into the dynamics of [active mobility](glossary.md#active-mobility) in built environments, , enabling researchers and urban planners to analyze and optimize infrastructure for active mobility, fostering safer and more efficient urban environments.
+## Research Gaps
 
-## Pipeline 
+Current research highlights gaps in understanding these dynamics, as traditional methods often rely on static models or simplified 2D representations that fail to capture realistic 3D interactions between users, vehicles, and infrastructure. While geospatial tools and game engines have advanced virtual simulations, few integrate parametric modeling of active mobility assets—like customizable bicycles—with high-fidelity urban 3D reconstructions for scenario testing.
 
+## Aims and Objectives
 
-```{figure} ../Images/plan.png
----
-name: Pipeline
----
-Pipeline of project
-```
+This thesis addresses these gaps by developing a simulation framework for active movement in built environments. The central aim is to enable researchers and urban planners to explore diverse scenarios, revealing insights into mobility dynamics and informing infrastructure optimizations for safer cities.
 
+## Research Focus
+
+The research focuses on a specific pipeline using Cesium SDK for geospatial integration, Blender for parametric bike and rider modeling, and Unity for simulation, targeting real-world locations via Google Maps data. Key objectives include creating modifiable 3D assets driven by YAML configurations and demonstrating their application in Unity-based movement analysis.
+
+## Pipeline
+
+![Pipeline Plan](../Images/plan.png)
 
 1. **Google 3D Maps**  
    - Retrieve map data from Google 3D Maps for the target location.
@@ -25,18 +27,17 @@ Pipeline of project
    - Use Cesium to convert the map data into a 3D mesh compatible with Unity.
 
 3. **YAML File**  
-   - Define bicycle properties (e.g., dimensions, measurements) in the YAML file to ensure accurate modeling in Blender.
+   - Define bicycle properties (e.g., dimensions, material) in the YAML file to ensure accurate modeling in Blender.
 
 4. **Blender**  
-   - Creation of a modifiable 3D model of a bike and rider that will change based on the specifications provided in the YAML file.
+   - Import a bicycle 3D model and configure its properties based on the specifications provided in the YAML file.
 
 5. **Unity**  
-   - Integrate the 3D map from Cesium and the bicycle model from Blender into Unity.
+   - Integrate the 3D map from Cesium and the bicycle model from Blender into Unity.  
    - Use Unity to simulate the environment and interactions.
 
 6. **Simulation**  
    - Run the simulation in Unity to test and analyze movement mobility.
-
 
 
 
