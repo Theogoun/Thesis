@@ -1,4 +1,4 @@
-# The Simulation
+# Component Integration And Full Simulation
 
 The active mobility simulation provides an interactive environment for studying and analyzing the movement patterns of pedestrians and cyclists in urban settings. The simulation combines realistic 3D environments with configurable agent behaviors to create scenarios that mirror real-world active mobility situations.
 

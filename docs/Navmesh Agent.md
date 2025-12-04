@@ -1,4 +1,4 @@
-# NavMesh Agent
+# Agent Navigation
 
 A NavMesh Agent is a Unity component that enables game objects to navigate intelligently across a NavMesh (Navigation Mesh). The NavMesh Agent acts as the "brain" for movement, allowing objects to pathfind, avoid obstacles, and move through complex environments automatically.
 

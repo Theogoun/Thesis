@@ -1,4 +1,4 @@
-# 3D Mesh Creation
+# 3D Enviroment Creation
 
 ## Cesium
 
@@ -93,6 +93,6 @@ The **3D-Mesh** is a 3D model of a specific geographic area created using Cesium
    Define the location (latitude, longitude, and height) for the area of interest.
 
 
-In this project, we generated a 3D-Mesh of the **Geopolis Campus** in Larisa, Greece. 
+In this project, we generated a 3D-Mesh of the **Gaiopolis Campus** in Larisa, Greece. 
 
 

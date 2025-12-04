@@ -30,10 +30,10 @@ The main constraints used are:
 - **Copy Location:** Used for the hip to follow the seat.
 
 ### Constraint Setup
-
 - **Hands:** IK constraint targets the handlebar empties; Limit Rotation keeps hands parallel to the floor and prevents collision with the bar.
 - **Hip:** Copy Location constraint targets the seat empty.
 - **Head:** Limit Rotation constraint keeps the head facing forward.
+
 
 ```{figure} ../Images/Biker_Top.png
 ---
@@ -42,9 +42,11 @@ name: Biker_Top
 Picture showcasing the upper body.
 ```
 
+
 - **Feet:** IK constraint targets the pedal empties.
 - **Shins:** Limit Rotation constraint prevents unnatural bending due to IK.
 - **Toes:** Limit Rotation keeps toes facing forward (for realism, not function).
+
 
 ```{figure} ../Images/Biker_Bot.png
 ---
@@ -52,8 +54,6 @@ name: Biker_Bot
 ---
 Picture showcasing the lower body.
 ```
-
-## Final Result
 
 ```{figure} ../Images/Biker_All.png
 ---

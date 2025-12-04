@@ -1,4 +1,4 @@
-# NavMesh
+# Navigation Area
 
 A **NavMesh** (short for *Navigation Mesh*) is a data structure used in Unity and other game engines to facilitate pathfinding for agents in a virtual environment. NavMeshes define the walkable areas of a scene, allowing agents to navigate the environment realistically and avoid obstacles.
 

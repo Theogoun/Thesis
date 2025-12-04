@@ -87,7 +87,7 @@
         
 
 \title{Unity-based Simulation of Active Transport in Built Environment}
-\date{Nov 29, 2025}
+\date{Dec 04, 2025}
 \release{}
 \author{Dimitrios Dimitriadis, Thodoris Gounelas}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -96,23 +96,77 @@
 \begin{document}
 
 \pagestyle{empty}
-\begin{titlepage}
-  \centering
-  \vspace*{1cm}
-  \includegraphics[width=0.18\textwidth]{unilogo.png}\\[1.5cm]
-  {\fontsize{18}{22}\selectfont\textbf{ΠΑΝΕΠΙΣΤΗΜΙΟ ΘΕΣΣΑΛΙΑΣ}\\[0.5em]}
-  {\large Σχολή Τεχνολογίας \\[0.5em] Τμήμα Ψηφιακών Συστημάτων \\[2em]}
-  {\fontsize{24}{28}\selectfont\textbf{Τίτλος Πτυχιακής}\\[2em]}
-  {\large \textbf{ΠΤΥΧΙΑΚΗ ΕΡΓΑΣΙΑ} \\[1.5em]}
-  {\large Ονοματεπώνυμο (AM: ?) \\[1.5em]}
-  {\large Επιβλέπων: ονομ/μο, βαθμίδα \\[2em]}
-  {\large \today\par}
-  \vfill
-\end{titlepage}
+\sphinxmaketitle
 \pagestyle{plain}
 \sphinxtableofcontents
 \pagestyle{normal}
 \phantomsection\label{\detokenize{Thesis::doc}}
+
+
+\sphinxAtStartPar
+\sphinxstyleemphasis{Προσομοίωση Ενεργής Μετακίνησης σε Δομημένο Περιβάλλον με την Χρήση Unity}
+
+\begin{DUlineblock}{0em}
+\item[] \sphinxstylestrong{\Large Internal Links}
+\end{DUlineblock}
+
+\sphinxAtStartPar
+{[}{[}1. Introduction{]}{]}
+{[}{[}2. Data Acquisition{]}{]}
+{[}{[}3. Unity{]}{]}
+{[}{[}3.1 Navmesh{]}{]}
+{[}{[}3.2 Animations{]}{]}
+Final Unity Import and Simulation
+
+\sphinxAtStartPar
+Note : Obsidian uses \sphinxhref{https://help.obsidian.md/Linking+notes+and+files/Internal+links}{Wikilink}
+
+\sphinxAtStartPar
+!{[}{[}1. Introduction{]}{]}
+
+\sphinxAtStartPar
+!{[}{[}2. Data Acquisition{]}{]}
+
+\sphinxAtStartPar
+!{[}{[}3. Unity{]}{]}
+
+\begin{DUlineblock}{0em}
+\item[] \sphinxstylestrong{\large References}
+\end{DUlineblock}
+\begin{enumerate}
+\sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
+\item {} 
+\sphinxAtStartPar
+\sphinxhref{https://csum.civ.uth.gr/active-mobility/}{Active Mobility webpage by CSUM}
+
+\item {} 
+\sphinxAtStartPar
+\sphinxhref{https://www.openstreetmap.org/copyright}{OpenStreetMap License}
+
+\item {} 
+\sphinxAtStartPar
+\sphinxhref{https://docs.unity3d.com/ScriptReference/AI.NavMeshAgent.html}{Unity NavMeshAgent API Reference}
+
+\item {} 
+\sphinxAtStartPar
+\sphinxhref{https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.1/manual/NavMeshSurface.html}{Unity NavMeshSurface Component}
+
+\item {} 
+\sphinxAtStartPar
+\sphinxhref{https://docs.unity3d.com/ScriptReference/AI.NavMeshObstacle.html}{Unity NavMeshObstacle API Reference}
+
+\item {} 
+\sphinxAtStartPar
+\sphinxhref{https://docs.unity3d.com/ScriptReference/AI.NavMesh.SamplePosition.html}{Unity NavMesh.SamplePosition Documentation}
+
+\item {} 
+\sphinxAtStartPar
+\sphinxhref{https://docs.unity3d.com/ScriptReference/Animator.html}{Unity Animator API Reference}
+
+\end{enumerate}
+
+\sphinxstepscope
+
 
 \chapter{Introduction}
 \label{\detokenize{Introduction:introduction}}\label{\detokenize{Introduction::doc}}
@@ -144,7 +198,7 @@ The research focuses on a specific pipeline using Cesium SDK for geospatial inte
 \section{Pipeline}
 \label{\detokenize{Introduction:pipeline}}
 \sphinxAtStartPar
-\sphinxincludegraphics{plan.png}
+\sphinxincludegraphics{{plan}.png}
 \begin{enumerate}
 \sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
 \item {} 
@@ -216,8 +270,8 @@ Run the simulation in Unity to test and analyze movement mobility.
 \sphinxstepscope
 
 
-\chapter{3D Mesh Creation}
-\label{\detokenize{Cesium:d-mesh-creation}}\label{\detokenize{Cesium::doc}}
+\chapter{3D Enviroment Creation}
+\label{\detokenize{Cesium:d-enviroment-creation}}\label{\detokenize{Cesium::doc}}
 
 \section{Cesium}
 \label{\detokenize{Cesium:cesium}}
@@ -257,7 +311,7 @@ To utilize real\sphinxhyphen{}world geospatial data in Unity, we rely on the \sp
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{cesium-ion-assets.png}
+\noindent\sphinxincludegraphics{{cesium-ion-assets}.png}
 \caption{Cesium terrain options}\label{\detokenize{Cesium:ion-assets}}\end{figure}
 
 \sphinxAtStartPar
@@ -305,7 +359,7 @@ For our specific purpose, we are utilizing the \sphinxstylestrong{Google Photore
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{cesium-georeference.png}
+\noindent\sphinxincludegraphics{{cesium-georeference}.png}
 \caption{Cesium georeference options}\label{\detokenize{Cesium:cesium-georeference}}\end{figure}
 
 \sphinxAtStartPar
@@ -350,7 +404,7 @@ Allows you to override the default Cesium Ellipsoid if a custom ellipsoid is req
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{campus.png}
+\noindent\sphinxincludegraphics{{campus}.png}
 \caption{Cesium georeference options}\label{\detokenize{Cesium:cesium-3d-generated-mesh}}\end{figure}
 
 \sphinxAtStartPar
@@ -370,7 +424,7 @@ Define the location (latitude, longitude, and height) for the area of interest.
 \end{enumerate}
 
 \sphinxAtStartPar
-In this project, we generated a 3D\sphinxhyphen{}Mesh of the \sphinxstylestrong{Geopolis Campus} in Larisa, Greece.
+In this project, we generated a 3D\sphinxhyphen{}Mesh of the \sphinxstylestrong{Gaiopolis Campus} in Larisa, Greece.
 
 \sphinxstepscope
 
@@ -416,7 +470,7 @@ The reason Blender is used for this project is mainly because of its versatility
 To ensure accurate naming and placement of all components, a solid understanding of bicycle structure and geometry was required. This section summarizes the key research steps and sources used to inform the modeling process.
 
 
-\subsection{1. Terminology: Anatomy and Geometry}
+\subsection{Terminology: Anatomy and Geometry}
 \label{\detokenize{Research:terminology-anatomy-and-geometry}}
 \sphinxAtStartPar
 The first step was to identify the correct terms for every part and measurement of the bike. This was accomplished using:
@@ -431,7 +485,7 @@ The first step was to identify the correct terms for every part and measurement 
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{Bike_Parts.png}
+\noindent\sphinxincludegraphics{{Bike_Parts}.png}
 \caption{Bike parts found in \sphinxhref{https://www.bikelockwiki.com}{bikelockwiki.com}}\label{\detokenize{Research:bike-parts}}\end{figure}
 \begin{itemize}
 \item {} 
@@ -441,7 +495,7 @@ The first step was to identify the correct terms for every part and measurement 
 \end{itemize}
 
 
-\subsection{2. Prototype Reference}
+\subsection{Prototype Reference}
 \label{\detokenize{Research:prototype-reference}}
 \sphinxAtStartPar
 To create a base prototype for the bike, a temporary template was needed. This was sourced from a \sphinxhref{https://www.researchgate.net/publication/295675697\_Multi-objective\_optimization\_of\_an\_on-road\_bicycle\_frame\_by\_uniform\_design\_and\_compromise\_programming}{research paper} on bicycle frame optimization. The example image below, taken from the paper, provided reference values for the length and thickness of each bike part:
@@ -450,12 +504,12 @@ To create a base prototype for the bike, a temporary template was needed. This w
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{Bike_Reference.png}
+\noindent\sphinxincludegraphics{{Bike_Reference}.png}
 \caption{Image taken from the \sphinxhref{https://www.researchgate.net/figure/Basic-dimensions-of-on-road-bicycle-frame-model\_fig2\_295675697}{research paper}}\label{\detokenize{Research:bike-reference}}\end{figure}
 
 
-\subsection{3. Identifying Key Measurements}
-\label{\detokenize{Research:identifying-key-measurements}}
+\subsection{Key Dimensions}
+\label{\detokenize{Research:key-dimensions}}
 \sphinxAtStartPar
 To enable customization, it was necessary to determine which measurements should be editable. Research into Blender’s capabilities and the most vital parts of the bike led to the following list of essential data:
 \begin{enumerate}
@@ -513,11 +567,11 @@ More information on how these are used can be found in the {[}{[}Setting the Rig
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{Bike_Geometry.png}
+\noindent\sphinxincludegraphics{{Bike_Geometry}.png}
 \caption{Bike geometry found in \sphinxhref{https://geometrygeeks.bike}{geometrygeeks.bike}}\label{\detokenize{Research:bike-geometry}}\end{figure}
 
 
-\subsection{4. Data Collection}
+\subsection{Data Collection}
 \label{\detokenize{Research:data-collection}}
 \sphinxAtStartPar
 A single prototype is not sufficient to ensure the model’s flexibility. Therefore, several examples were gathered from \sphinxhref{https://geometrygeeks.bike/}{geometrygeeks.bike} and its database of bikes and measurements. This allowed for a broader understanding of the range of possible geometries and ensured the model could accommodate various designs.
@@ -531,7 +585,7 @@ A single prototype is not sufficient to ensure the model’s flexibility. Theref
 This section describes the step\sphinxhyphen{}by\sphinxhyphen{}step process of constructing the 3D bike model, from the initial frame to the final assembly of all components.
 
 
-\subsection{1. Building the Frame}
+\subsection{Building the Frame}
 \label{\detokenize{Making the Model:building-the-frame}}
 \sphinxAtStartPar
 To begin, a simple prototype bike frame was created using cylinders, each representing one of the six main parts of the frame. These were aligned and measured by tracing over the example from the research paper referenced in the {\hyperref[\detokenize{Research::doc}]{\sphinxcrossref{\DUrole{std,std-doc}{Research}}}} section.
@@ -540,7 +594,7 @@ To begin, a simple prototype bike frame was created using cylinders, each repres
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{Modeling.png}
+\noindent\sphinxincludegraphics{{Modeling}.png}
 \caption{Screenshot taken in Blender}\label{\detokenize{Making the Model:modeling}}\end{figure}
 
 \sphinxAtStartPar
@@ -550,11 +604,11 @@ After establishing the standard frame, the Seat Stays and Chain Stays were split
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{Modeling_Final.png}
+\noindent\sphinxincludegraphics{{Modeling_Final}.png}
 \caption{Screenshot taken in Blender}\label{\detokenize{Making the Model:modeling-final}}\end{figure}
 
 
-\subsection{2. Modeling the Wheels}
+\subsection{Modeling the Wheels}
 \label{\detokenize{Making the Model:modeling-the-wheels}}
 \sphinxAtStartPar
 The wheels were modeled early in the process, as they do not interfere with the frame design and can be added independently. The “Wireframe” modifier was used for the spokes to avoid creating a mesh for each one, and the spokes were separated into left and right to achieve the typical curvature. A simple rim and tire were then added. Each wheel also includes a hidden mesh (SizeF for the front, SizeB for the back) to control scaling in scripts.
@@ -563,11 +617,11 @@ The wheels were modeled early in the process, as they do not interfere with the 
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{Wheel.png}
+\noindent\sphinxincludegraphics{{Wheel}.png}
 \caption{Screenshot taken in Blender}\label{\detokenize{Making the Model:wheel}}\end{figure}
 
 
-\subsection{3. Drivetrain Components}
+\subsection{Drivetrain Components}
 \label{\detokenize{Making the Model:drivetrain-components}}
 \sphinxAtStartPar
 To ensure the pedals functioned as intended, each pedal was split into four parts: a spacer (for left/right positioning), the pedal arm, a mesh to hold the pedal on the arm (short cylinder at the lower end), and the pedal itself. The importance of these extra parts is discussed further in the {\hyperref[\detokenize{Setting the Rig::doc}]{\sphinxcrossref{\DUrole{std,std-doc}{Setting the Rig}}}} section.
@@ -576,7 +630,7 @@ To ensure the pedals functioned as intended, each pedal was split into four part
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{Pedal.png}
+\noindent\sphinxincludegraphics{{Pedal}.png}
 \caption{Screenshot taken in Blender}\label{\detokenize{Making the Model:pedal}}\end{figure}
 
 \sphinxAtStartPar
@@ -586,11 +640,11 @@ Due to their complexity, the chain was divided into four stationary pieces (left
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{Chain.png}
+\noindent\sphinxincludegraphics{{Chain}.png}
 \caption{Screenshot taken in Blender}\label{\detokenize{Making the Model:chain}}\end{figure}
 
 
-\subsection{4. Final Assembly and Refinements}
+\subsection{Final Assembly and Refinements}
 \label{\detokenize{Making the Model:final-assembly-and-refinements}}
 \sphinxAtStartPar
 With all major parts complete, minor refinements were made: adding the rake to prevent the wheel from floating (due to the fork’s lack of curvature), including the crankset and cassette, and improving the saddle’s appearance. The final result is a complete bike model, ready to be transformed according to the data.
@@ -599,7 +653,7 @@ With all major parts complete, minor refinements were made: adding the rake to p
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{Model.png}
+\noindent\sphinxincludegraphics{{Model}.png}
 \caption{Screenshot taken in Blender}\label{\detokenize{Making the Model:model}}\end{figure}
 
 \sphinxstepscope
@@ -691,7 +745,7 @@ E_z &= D_z
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{Points.png}
+\noindent\sphinxincludegraphics{{Points}.png}
 \caption{Simple illustration of the points’ position.}\label{\detokenize{Setting the Rig:points}}\end{figure}
 \begin{itemize}
 \item {} 
@@ -755,7 +809,7 @@ Similarly the way the bones are connected in an armature is very important as it
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{Bones.png}
+\noindent\sphinxincludegraphics{{Bones}.png}
 \caption{Screenshot taken in blender}\label{\detokenize{Setting the Rig:bones}}\end{figure}
 
 \sphinxAtStartPar
@@ -771,7 +825,7 @@ A total of 2 armatures were made for this part, one for the frame of the bike an
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{Bike_Rigs.png}
+\noindent\sphinxincludegraphics{{Bike_Rigs}.png}
 \caption{Screenshot taken in Blender}\label{\detokenize{Setting the Rig:bike-rigs}}\end{figure}
 
 \sphinxAtStartPar
@@ -873,70 +927,70 @@ This section explains the structure and logic of the Blender editing script used
 \subsection{Key Parts of the Script}
 \label{\detokenize{Edit Script:key-parts-of-the-script}}
 
-\subsubsection{1. The Rig}
+\subsubsection{The Rig}
 \label{\detokenize{Edit Script:the-rig}}
 \sphinxAtStartPar
 The ability to use values and transform the bike relies on the rig setup, especially the key points.
 
 
-\subsubsection{2. Bpy Library}
+\subsubsection{Bpy Library}
 \label{\detokenize{Edit Script:bpy-library}}
 \sphinxAtStartPar
 The script uses Blender’s \sphinxcode{\sphinxupquote{bpy}} library, accessed through Blender’s scripting section, to manipulate the model with Python.
 
 
-\subsubsection{3. Data Acquisition}
+\subsubsection{Data Acquisition}
 \label{\detokenize{Edit Script:data-acquisition}}
 \sphinxAtStartPar
 All measurements and angles for the bike are stored in an external YAML file, which is loaded into Blender. The YAML structure is as follows (all values in millimeters except angles in degrees, \sphinxcode{\sphinxupquote{Material}} as a string, and \sphinxcode{\sphinxupquote{Top Tube}}/\sphinxcode{\sphinxupquote{Down Tube}} as booleans):
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
 \PYG{n+nt}{Frame}\PYG{p}{:}
-\PYG{err}{	}\PYG{n+nt}{Fork Lenght}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{470}
-\PYG{err}{	}\PYG{n+nt}{Head Angle}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{69.5}
-\PYG{err}{	}\PYG{n+nt}{Head Tube}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{130}
-\PYG{err}{	}\PYG{n+nt}{Rake Offset}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{40}
-\PYG{err}{	}\PYG{n+nt}{Reach}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{380}
-\PYG{err}{	}\PYG{n+nt}{Seat Angle}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{73}
-\PYG{err}{	}\PYG{n+nt}{Seat Tube}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{375}
-\PYG{err}{	}\PYG{n+nt}{Stack}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{620}
-\PYG{err}{	}\PYG{n+nt}{Wheelbase}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{1080}
+\PYG{+w}{  }\PYG{n+nt}{Fork Lenght}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{470}
+\PYG{+w}{  }\PYG{n+nt}{Head Angle}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{69.5}
+\PYG{+w}{  }\PYG{n+nt}{Head Tube}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{130}
+\PYG{+w}{  }\PYG{n+nt}{Rake Offset}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{40}
+\PYG{+w}{  }\PYG{n+nt}{Reach}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{380}
+\PYG{+w}{  }\PYG{n+nt}{Seat Angle}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{73}
+\PYG{+w}{  }\PYG{n+nt}{Seat Tube}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{375}
+\PYG{+w}{  }\PYG{n+nt}{Stack}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{620}
+\PYG{+w}{  }\PYG{n+nt}{Wheelbase}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{1080}
 \PYG{n+nt}{Frame Details}\PYG{p}{:}
-\PYG{err}{	}\PYG{n+nt}{Diameter}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{40}
-\PYG{err}{	}\PYG{n+nt}{Down Tube}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{True}
-\PYG{err}{	}\PYG{n+nt}{Material}\PYG{p}{:}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{Metal}\PYG{l+s}{\PYGZsq{}}
-\PYG{err}{	}\PYG{n+nt}{Thickness}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{2}
-\PYG{err}{	}\PYG{n+nt}{Top Tube}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{True}
+\PYG{+w}{  }\PYG{n+nt}{Diameter}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{40}
+\PYG{+w}{  }\PYG{n+nt}{Down Tube}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{True}
+\PYG{+w}{  }\PYG{n+nt}{Material}\PYG{p}{:}\PYG{+w}{ }\PYG{l+s}{\PYGZsq{}}\PYG{l+s}{Metal}\PYG{l+s}{\PYGZsq{}}
+\PYG{+w}{  }\PYG{n+nt}{Thickness}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{2}
+\PYG{+w}{  }\PYG{n+nt}{Top Tube}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{True}
 \PYG{n+nt}{Handlebar}\PYG{p}{:}
-\PYG{err}{	}\PYG{n+nt}{Handlebar Height}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{50}
-\PYG{err}{	}\PYG{n+nt}{HandleBar Lenght}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{400}
+\PYG{+w}{  }\PYG{n+nt}{Handlebar Height}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{50}
+\PYG{+w}{  }\PYG{n+nt}{HandleBar Lenght}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{400}
 \PYG{n+nt}{Seat}\PYG{p}{:}
-\PYG{err}{	}\PYG{n+nt}{Seat Post}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{150}
+\PYG{+w}{  }\PYG{n+nt}{Seat Post}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{150}
 \PYG{n+nt}{Wheels}\PYG{p}{:}
-\PYG{err}{	}\PYG{n+nt}{Tire Radius}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{700}
-\PYG{err}{	}\PYG{n+nt}{Tire Width}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{40}
+\PYG{+w}{  }\PYG{n+nt}{Tire Radius}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{700}
+\PYG{+w}{  }\PYG{n+nt}{Tire Width}\PYG{p}{:}\PYG{+w}{ }\PYG{l+lScalar+lScalarPlain}{40}
 \end{sphinxVerbatim}
 
 
-\subsubsection{4. Set\_Point(“name”, X, Z) Function}
+\subsubsection{Set\_Point(“name”, X, Z) Function}
 \label{\detokenize{Edit Script:set-point-name-x-z-function}}
 \sphinxAtStartPar
 Moves any object to a specified location. Takes the object’s name and X, Z coordinates (Y remains 0), sets the coordinates, selects and moves the object, then deselects everything to avoid accidental multi\sphinxhyphen{}object moves.
 
 
-\subsubsection{5. Set\_Scale(“name”, X, Y, Z) Function}
+\subsubsection{Set\_Scale(“name”, X, Y, Z) Function}
 \label{\detokenize{Edit Script:set-scale-name-x-y-z-function}}
 \sphinxAtStartPar
 Scales objects to the required size. Receives the object’s name and scale for each axis. A value of 0 (or less) leaves that axis unchanged, allowing selective scaling. After scaling, the function resets the scale to default and deselects everything.
 
 
-\subsubsection{6. Small Corrections/Adjustments}
+\subsubsection{Small Corrections/Adjustments}
 \label{\detokenize{Edit Script:small-corrections-adjustments}}
 \sphinxAtStartPar
 Some parts need to be offset from main points for design reasons. These are moved last and follow the rest of the parts, using the two functions above.
 
 
-\subsubsection{7. Wheel Adjustments}
+\subsubsection{Wheel Adjustments}
 \label{\detokenize{Edit Script:wheel-adjustments}}
 \sphinxAtStartPar
 The script includes a section focused on adjusting the tires and wheels to match the data using the \sphinxcode{\sphinxupquote{Set\_Scale()}} function.
@@ -1025,13 +1079,13 @@ Transform wheels as needed using \sphinxcode{\sphinxupquote{Set\_Scale()}}:
 \end{sphinxVerbatim}
 
 
-\subsection{Examples}
+\subsubsection{Examples}
 \label{\detokenize{Edit Script:examples}}
 \begin{figure}[htbp]
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{examples.png}
+\noindent\sphinxincludegraphics{{examples}.png}
 \caption{Four example bikes made with the code.}\label{\detokenize{Edit Script:id1}}\end{figure}
 
 \sphinxstepscope
@@ -1052,7 +1106,7 @@ The biker model and it’s armature is the same as the one used for pedestrians 
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{Biker.png}
+\noindent\sphinxincludegraphics{{Biker}.png}
 \caption{Screenshot taken in Blender showing the Armature of the biker}\label{\detokenize{Biker:id1}}\end{figure}
 
 
@@ -1116,7 +1170,7 @@ The main constraints used are:
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{Biker_Top.png}
+\noindent\sphinxincludegraphics{{Biker_Top}.png}
 \caption{Picture showcasing the upper body.}\label{\detokenize{Biker:biker-top}}\end{figure}
 \begin{itemize}
 \item {} 
@@ -1137,17 +1191,14 @@ The main constraints used are:
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{Biker_Bot.png}
+\noindent\sphinxincludegraphics{{Biker_Bot}.png}
 \caption{Picture showcasing the lower body.}\label{\detokenize{Biker:biker-bot}}\end{figure}
 
-
-\subsection{Final Result}
-\label{\detokenize{Biker:final-result}}
 \begin{figure}[htbp]
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{Biker_All.png}
+\noindent\sphinxincludegraphics{{Biker_All}.png}
 \caption{Final result of biker.}\label{\detokenize{Biker:biker-all}}\end{figure}
 
 \sphinxstepscope
@@ -1224,7 +1275,7 @@ A \sphinxstylestrong{NavMesh} (short for \sphinxstyleemphasis{Navigation Mesh}) 
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{navmeshsurface.png}
+\noindent\sphinxincludegraphics{{navmeshsurface}.png}
 \caption{NavMesh Surface Component in Unity}\label{\detokenize{Navmesh:navmesh-surface}}\end{figure}
 
 \sphinxAtStartPar
@@ -1256,7 +1307,7 @@ Determines which objects in the scene are included when baking the NavMesh. This
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{navmesh.png}
+\noindent\sphinxincludegraphics{{navmesh}.png}
 \caption{Generated Navmesh for human actors}\label{\detokenize{Navmesh:id1}}\end{figure}
 
 \sphinxAtStartPar
@@ -1404,7 +1455,7 @@ The bicycle agent leverages Unity’s NavMesh system to navigate complex terrain
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{bicycleagent.png}
+\noindent\sphinxincludegraphics{{bicycleagent}.png}
 \caption{Nav Mesh Agent \sphinxhyphen{} Bicycle Configuration}\label{\detokenize{Bicycle Agent:id1}}\end{figure}
 
 \sphinxAtStartPar
@@ -1660,7 +1711,7 @@ Human agents use Unity’s NavMesh system to simulate realistic pedestrian movem
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{humanagent.png}
+\noindent\sphinxincludegraphics{{humanagent}.png}
 \caption{Nav Mesh Agent \sphinxhyphen{} Human Configuration}\label{\detokenize{Human Agent:id1}}\end{figure}
 
 \sphinxAtStartPar
@@ -1819,7 +1870,7 @@ The animation system is built around two key components:
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{animation.png}
+\noindent\sphinxincludegraphics{{animation}.png}
 \caption{Animation Controller Entry and Movement State}\label{\detokenize{Human Agent:animation-controller}}\end{figure}
 \begin{itemize}
 \item {} 
@@ -1832,7 +1883,7 @@ The animation system is built around two key components:
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{blendtree.png}
+\noindent\sphinxincludegraphics{{blendtree}.png}
 \caption{Blend Tree for Dynamic Movement Animations}\label{\detokenize{Human Agent:blend-tree}}\end{figure}
 
 
@@ -2061,7 +2112,7 @@ The simulation is built as an interactive Unity application that allows users to
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{simulation.png}
+\noindent\sphinxincludegraphics{{simulation}.png}
 \caption{The main simulation interface showing agent placement options}\label{\detokenize{The Simulation:simulation-interface}}\end{figure}
 
 
@@ -2115,7 +2166,7 @@ Once an agent is placed in the scene, clicking on it reveals a configuration pan
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{humanoptions.png}
+\noindent\sphinxincludegraphics{{humanoptions}.png}
 \caption{Configuration panel for human agent parameters}\label{\detokenize{The Simulation:human-options-panel}}\end{figure}
 \begin{itemize}
 \item {} 
@@ -2147,7 +2198,7 @@ Once an agent is placed in the scene, clicking on it reveals a configuration pan
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{bicycle_options.png}
+\noindent\sphinxincludegraphics{{bicycle_options}.png}
 \caption{Configuration panel for bicycle agent parameters}\label{\detokenize{The Simulation:bicycle-options-panel}}\end{figure}
 \begin{itemize}
 \item {} 
@@ -2260,14 +2311,14 @@ A key feature of the simulation is the ability to switch to first\sphinxhyphen{}
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{human_view.png}
+\noindent\sphinxincludegraphics{{human_view}.png}
 \caption{First\sphinxhyphen{}person perspective from a human agent showing the campus environment}\label{\detokenize{The Simulation:human-agent-first-person-view}}\end{figure}
 
 \begin{figure}[htbp]
 \centering
 \capstart
 
-\noindent\sphinxincludegraphics{bicycle_view.png}
+\noindent\sphinxincludegraphics{{bicycle_view}.png}
 \caption{First\sphinxhyphen{}person perspective from a bicycle agent navigating through the simulation}\label{\detokenize{The Simulation:bicycle-agent-first-person-view}}\end{figure}
 \begin{enumerate}
 \sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
@@ -2421,10 +2472,4 @@ A point in 3D space defined by X, Y, and Z coordinates. Vertices are the fundame
 
 \renewcommand{\indexname}{Index}
 \printindex
-
-% Bibliography
-\nocite{*}
-\bibliographystyle{plain}
-\bibliography{references}
-
 \end{document}
