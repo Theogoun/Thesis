@@ -55,9 +55,22 @@ The script includes a section focused on adjusting the tires and wheels to match
 
 ---
 
+Here are some examples of various types of bikes, namely: a foldable bike, a normal sports bike, an electric bike and Dimitris' mountain bike.
+
+
+```{figure} ../Images/examples.png
+---
+name: bike-examples
+alt: Bicycle Model Examples
+---
+Bicycle Model Examples
+```
+
+
 ## Editing Process
 
 > **Note:** The code below is simplified for clarity. Variable names are shown directly (e.g., `Head Angle`), but in the actual code, they are accessed as `data['Frame']['Head Angle']`. In `Set_Scale`, X and Y are written on separate lines for readability.
+
 
 ### Step 1: Data Preparation
 Read and adjust the data for calculations—convert angles to radians and add the Head Tube size to the Fork Length for accurate front wheel placement:
@@ -115,11 +128,3 @@ Set_Scale("SizeF", Wheel_Size / 1000, Wheel_Size / 1000, 0)
 Set_Scale("SizeB", Wheel_Size / 1000, Wheel_Size / 1000, 0)
 ```
 
-### Examples
-
-```{figure} ../Images/examples.png
----
-name: examples
----
-Four example bikes made with the code.
-```

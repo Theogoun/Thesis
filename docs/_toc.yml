@@ -13,7 +13,6 @@ chapters:
       - file: Setting the Rig
       - file: Edit Script
       - file: Biker
-  - file: Unity
   - file: Navmesh
   - file: Navmesh Agent
     sections:
