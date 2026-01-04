@@ -8,7 +8,7 @@ chapters:
   - file: Cesium
   - file: Blender
     sections:
-      - file: Research
+      - file: Bike Basic Geometry
       - file: Making the Model
       - file: Setting the Rig
       - file: Edit Script

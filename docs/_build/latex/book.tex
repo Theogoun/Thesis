@@ -87,7 +87,7 @@
         
 
 \title{Unity-based Simulation of Active Transport in Built Environment}
-\date{Dec 04, 2025}
+\date{Jan 04, 2026}
 \release{}
 \author{Dimitrios Dimitriadis, Thodoris Gounelas}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -101,6 +101,69 @@
 \sphinxtableofcontents
 \pagestyle{normal}
 \phantomsection\label{\detokenize{Thesis::doc}}
+
+
+\sphinxAtStartPar
+\sphinxstyleemphasis{Προσομοίωση Ενεργής Μετακίνησης σε Δομημένο Περιβάλλον με την Χρήση Unity}
+
+\begin{DUlineblock}{0em}
+\item[] \sphinxstylestrong{\Large Internal Links}
+\end{DUlineblock}
+
+\sphinxAtStartPar
+{[}{[}1. Introduction{]}{]}
+{[}{[}2. Data Acquisition{]}{]}
+{[}{[}3. Unity{]}{]}
+{[}{[}3.1 Navmesh{]}{]}
+{[}{[}3.2 Animations{]}{]}
+Final Unity Import and Simulation
+
+\sphinxAtStartPar
+Note : Obsidian uses \sphinxhref{https://help.obsidian.md/Linking+notes+and+files/Internal+links}{Wikilink}
+
+\sphinxAtStartPar
+!{[}{[}1. Introduction{]}{]}
+
+\sphinxAtStartPar
+!{[}{[}2. Data Acquisition{]}{]}
+
+\sphinxAtStartPar
+!{[}{[}3. Unity{]}{]}
+
+\begin{DUlineblock}{0em}
+\item[] \sphinxstylestrong{\large References}
+\end{DUlineblock}
+\begin{enumerate}
+\sphinxsetlistlabels{\arabic}{enumi}{enumii}{}{.}%
+\item {} 
+\sphinxAtStartPar
+\sphinxhref{https://csum.civ.uth.gr/active-mobility/}{Active Mobility webpage by CSUM}
+
+\item {} 
+\sphinxAtStartPar
+\sphinxhref{https://www.openstreetmap.org/copyright}{OpenStreetMap License}
+
+\item {} 
+\sphinxAtStartPar
+\sphinxhref{https://docs.unity3d.com/ScriptReference/AI.NavMeshAgent.html}{Unity NavMeshAgent API Reference}
+
+\item {} 
+\sphinxAtStartPar
+\sphinxhref{https://docs.unity3d.com/Packages/com.unity.ai.navigation@1.1/manual/NavMeshSurface.html}{Unity NavMeshSurface Component}
+
+\item {} 
+\sphinxAtStartPar
+\sphinxhref{https://docs.unity3d.com/ScriptReference/AI.NavMeshObstacle.html}{Unity NavMeshObstacle API Reference}
+
+\item {} 
+\sphinxAtStartPar
+\sphinxhref{https://docs.unity3d.com/ScriptReference/AI.NavMesh.SamplePosition.html}{Unity NavMesh.SamplePosition Documentation}
+
+\item {} 
+\sphinxAtStartPar
+\sphinxhref{https://docs.unity3d.com/ScriptReference/Animator.html}{Unity Animator API Reference}
+
+\end{enumerate}
 
 \sphinxstepscope
 
@@ -123,7 +186,7 @@ Existing approaches frequently rely on static models or simplified 2D representa
 \sphinxstylestrong{Unity} is adopted as the central simulation platform for this thesis, serving as the convergence point where geospatial data, parametric 3D models, and navigation systems integrate into a cohesive active mobility simulation. Originally designed for game development, Unity has evolved into a powerful, cross\sphinxhyphen{}platform engine for real\sphinxhyphen{}time 3D simulations and interactive applications across scientific research, urban planning, and mobility studies. Its robust physics engine, comprehensive C\# scripting capabilities, and extensive asset pipeline make it uniquely suited for this work.
 
 \sphinxAtStartPar
-Unity’s \sphinxstylestrong{real\sphinxhyphen{}time rendering} enables dynamic visualization of complex urban environments, while its \sphinxstylestrong{physics system} supports realistic bicycle movement and rider behavior. Crucially, Unity’s \sphinxstylestrong{geospatial integration} through the Cesium for Unity plugin allows accurate representations of real\sphinxhyphen{}world built environments, such as the Geopolis Campus in Larisa, Greece, used as the primary test site. The engine’s \sphinxstylestrong{NavMesh navigation system} provides intelligent pathfinding for agents, while \sphinxstylestrong{Cinemachine camera systems} enable immersive observation from both free\sphinxhyphen{}flight and agent\sphinxhyphen{}specific perspectives.
+Unity’s \sphinxstylestrong{real\sphinxhyphen{}time rendering} enables dynamic visualization of complex urban environments, while its \sphinxstylestrong{physics system} supports realistic bicycle movement and rider behavior. Crucially, Unity’s \sphinxstylestrong{geospatial integration} through the Cesium for Unity plugin allows accurate representations of real\sphinxhyphen{}world built environments, such as the Gaiopolis Campus in Larisa, Greece, used as the primary test site. The engine’s \sphinxstylestrong{NavMesh navigation system} provides intelligent pathfinding for agents, while \sphinxstylestrong{Cinemachine camera systems} enable immersive observation from both free\sphinxhyphen{}flight and agent\sphinxhyphen{}specific perspectives.
 
 
 \section{Aims and Objectives}
@@ -426,14 +489,14 @@ The reason Blender is used for this project is mainly because of its versatility
 \sphinxstepscope
 
 
-\section{Research}
-\label{\detokenize{Research:research}}\label{\detokenize{Research::doc}}
+\section{Bike Basic Geometry}
+\label{\detokenize{Bike Basic Geometry:bike-basic-geometry}}\label{\detokenize{Bike Basic Geometry::doc}}
 \sphinxAtStartPar
 To ensure accurate naming and placement of all components, a solid understanding of bicycle structure and geometry was required. This section summarizes the key research steps and sources used to inform the modeling process.
 
 
 \subsection{Terminology: Anatomy and Geometry}
-\label{\detokenize{Research:terminology-anatomy-and-geometry}}
+\label{\detokenize{Bike Basic Geometry:terminology-anatomy-and-geometry}}
 \sphinxAtStartPar
 The first step was to identify the correct terms for every part and measurement of the bike. This was accomplished using:
 \begin{itemize}
@@ -448,7 +511,7 @@ The first step was to identify the correct terms for every part and measurement 
 \capstart
 
 \noindent\sphinxincludegraphics{{Bike_Parts}.png}
-\caption{Bike parts found in \sphinxhref{https://www.bikelockwiki.com}{bikelockwiki.com}}\label{\detokenize{Research:bike-parts}}\end{figure}
+\caption{Bike parts found in \sphinxhref{https://www.bikelockwiki.com}{bikelockwiki.com}}\label{\detokenize{Bike Basic Geometry:bike-parts}}\end{figure}
 \begin{itemize}
 \item {} 
 \sphinxAtStartPar
@@ -458,20 +521,20 @@ The first step was to identify the correct terms for every part and measurement 
 
 
 \subsection{Prototype Reference}
-\label{\detokenize{Research:prototype-reference}}
+\label{\detokenize{Bike Basic Geometry:prototype-reference}}
 \sphinxAtStartPar
-To create a base prototype for the bike, a temporary template was needed. This was sourced from a \sphinxhref{https://www.researchgate.net/publication/295675697\_Multi-objective\_optimization\_of\_an\_on-road\_bicycle\_frame\_by\_uniform\_design\_and\_compromise\_programming}{research paper} on bicycle frame optimization. The example image below, taken from the paper, provided reference values for the length and thickness of each bike part:
+To create a base prototype for the bike, a temporary template was needed. This was sourced from a research paper on bicycle frame optimization (Yung\sphinxhyphen{}Chang Cheng and Cheng\sphinxhyphen{}Kang Lee and Ming\sphinxhyphen{}Tsang Tsai, 2016). The example image below, taken from the paper, provided reference values for the length and thickness of each bike part:
 
 \begin{figure}[htbp]
 \centering
 \capstart
 
 \noindent\sphinxincludegraphics{{Bike_Reference}.png}
-\caption{Image taken from the \sphinxhref{https://www.researchgate.net/figure/Basic-dimensions-of-on-road-bicycle-frame-model\_fig2\_295675697}{research paper}}\label{\detokenize{Research:bike-reference}}\end{figure}
+\caption{Image taken from the \sphinxhref{https://www.researchgate.net/figure/Basic-dimensions-of-on-road-bicycle-frame-model\_fig2\_295675697}{research paper}}\label{\detokenize{Bike Basic Geometry:bike-reference}}\end{figure}
 
 
 \subsection{Key Dimensions}
-\label{\detokenize{Research:key-dimensions}}
+\label{\detokenize{Bike Basic Geometry:key-dimensions}}
 \sphinxAtStartPar
 To enable customization, it was necessary to determine which measurements should be editable. Research into Blender’s capabilities and the most vital parts of the bike led to the following list of essential data:
 \begin{enumerate}
@@ -530,11 +593,11 @@ More information on how these are used can be found in the {[}{[}Setting the Rig
 \capstart
 
 \noindent\sphinxincludegraphics{{Bike_Geometry}.png}
-\caption{Bike geometry found in \sphinxhref{https://geometrygeeks.bike}{geometrygeeks.bike}}\label{\detokenize{Research:bike-geometry}}\end{figure}
+\caption{Bike geometry found in \sphinxhref{https://geometrygeeks.bike}{geometrygeeks.bike}}\label{\detokenize{Bike Basic Geometry:bike-geometry}}\end{figure}
 
 
 \subsection{Data Collection}
-\label{\detokenize{Research:data-collection}}
+\label{\detokenize{Bike Basic Geometry:data-collection}}
 \sphinxAtStartPar
 A single prototype is not sufficient to ensure the model’s flexibility. Therefore, several examples were gathered from \sphinxhref{https://geometrygeeks.bike/}{geometrygeeks.bike} and its database of bikes and measurements. This allowed for a broader understanding of the range of possible geometries and ensured the model could accommodate various designs.
 
@@ -550,7 +613,7 @@ This section describes the step\sphinxhyphen{}by\sphinxhyphen{}step process of c
 \subsection{Building the Frame}
 \label{\detokenize{Making the Model:building-the-frame}}
 \sphinxAtStartPar
-To begin, a simple prototype bike frame was created using cylinders, each representing one of the six main parts of the frame. These were aligned and measured by tracing over the example from the research paper referenced in the {\hyperref[\detokenize{Research::doc}]{\sphinxcrossref{\DUrole{std,std-doc}{Research}}}} section.
+To begin, a simple prototype bike frame was created using cylinders, each representing one of the six main parts of the frame. These were aligned and measured by tracing over the example from the research paper referenced in the \DUrole{xref,myst}{Research} section.
 
 \begin{figure}[htbp]
 \centering
@@ -2291,7 +2354,7 @@ Environmental factors that influence navigation decisions
 \chapter{Conclusion}
 \label{\detokenize{Conclusion:conclusion}}\label{\detokenize{Conclusion::doc}}
 \sphinxAtStartPar
-In conclusion, this thesis successfully delivers a Unity\sphinxhyphen{}based simulation framework that integrates Cesium\sphinxhyphen{}generated 3D urban meshes, parametrically configurable bicycles created via Blender and YAML\sphinxhyphen{}driven scripting, and NavMesh agents for realistic cyclist and pedestrian movement in built environments like the Geopolis Campus in Larisa, Greece. The application enables interactive scenario creation, real\sphinxhyphen{}time pathfinding with obstacle avoidance, and first\sphinxhyphen{}person camera perspectives, providing researchers and urban planners with an accessible tool for both conducting active mobility studies and demonstrating findings—distinguishing it from complex alternatives through its intuitive interface and real\sphinxhyphen{}world geospatial fidelity.
+In conclusion, this thesis successfully delivers a Unity\sphinxhyphen{}based simulation framework that integrates Cesium\sphinxhyphen{}generated 3D urban meshes, parametrically configurable bicycles created via Blender and YAML\sphinxhyphen{}driven scripting, and NavMesh agents for realistic cyclist and pedestrian movement in built environments like the Gaiopolis Campus in Larisa, Greece. The application enables interactive scenario creation, real\sphinxhyphen{}time pathfinding with obstacle avoidance, and first\sphinxhyphen{}person camera perspectives, providing researchers and urban planners with an accessible tool for both conducting active mobility studies and demonstrating findings—distinguishing it from complex alternatives through its intuitive interface and real\sphinxhyphen{}world geospatial fidelity.
 
 \sphinxAtStartPar
 Development overcame key challenges, including bicycle geometry data sourcing from specialized references like GeometryGeeks.bike and research papers, alongside technical hurdles in rigging constraints, inverse kinematics for biker posing, and Unity integration during thesis production.
@@ -2395,12 +2458,11 @@ A cross\sphinxhyphen{}platform game engine and development environment used for 
 A point in 3D space defined by X, Y, and Z coordinates. Vertices are the fundamental building blocks of 3D meshes. Connected vertices form edges, and enclosed edges form faces. The position and manipulation of vertices determine the shape of 3D objects.
 
 
+
+
+
+
+
 \renewcommand{\indexname}{Index}
 \printindex
-
-% Bibliography
-\nocite{*}
-\bibliographystyle{plain}
-\bibliography{references}
-
 \end{document}
