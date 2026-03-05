@@ -1,4 +1,4 @@
-# Active Mobility Simulation Framework in Unity
+# Unity-based Simulation of Active Transport in Built Environment
 
 ![Simulation Showcase](image.png)
 
