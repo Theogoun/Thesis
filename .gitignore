@@ -3,3 +3,6 @@
 /.obsidian
 /.vscode
 /.idea
+
+# Mapbox api 
+Unity/Assets/Resources/Mapbox/
